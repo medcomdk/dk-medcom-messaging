@@ -1,14 +1,10 @@
-@startuml MessagingModel
+@startuml MedComMessageHeader
 
 hide empty members
 
-class "MedComMessagingMessage" as message
 class "MedComMessagingMessageHeader" as messageHeader
 class "MedComMessagingOrganization" as organization <<MedComCoreOrganization>>
-class "MedComMessagingProvenance" as provenance
 
-message -- messageHeader : "entry"
-message -- provenance : "entry"
 
 messageHeader -- organization : "sender"
 messageHeader -- organization : "receiver"
