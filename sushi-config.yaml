@@ -1,4 +1,4 @@
-id: dk.fhir.ig.medcom-messaging
+id: dk.fhir.ig.dk-medcom-messaging
 canonical: http://medcomfhir.dk/fhir/messaging
 name: MedComMessaging
 title: "DK MedCom Messaging"
