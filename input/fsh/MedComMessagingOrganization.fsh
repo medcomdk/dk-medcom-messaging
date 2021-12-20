@@ -5,7 +5,7 @@ Description: "A formally recognized organizations registered for exchanging mess
 * . ^short = "A formally recognized organizations within Danish healthcare"
 * identifier 2.. MS
 * identifier contains eanIdentifier 1..1 MS
-* identifier[eanIdentifier] only http://medcomfhir.dk/fhir/core/1.0/StructureDefinition/medcom-core-eanIdentifier
+* identifier[eanIdentifier] only MedComCoreEANIdentifier
 
 
 Alias: $SORCode = urn:oid:1.2.208.176.1.1
