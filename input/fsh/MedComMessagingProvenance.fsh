@@ -7,7 +7,7 @@ Description: "Provenance information about the messages preceeding the current m
 * target ^short = "Targets the MedComMessagingMessageHeader from the previous message."
 * occurred[x] 1..
 * occurredDateTime 1.. MS
-* occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include both a date and a time including timezone."
+* occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include a date, a time and timezone."
 * recorded MS
 * recorded ^short = "A system readable date and time for when the message is sent."
 * activity 1.. MS
@@ -22,6 +22,7 @@ Description: "Provenance information about the messages preceeding the current m
 * agent ^short = "The actors involved in the activity taking place"
 * agent.who 1.. MS
 * agent.who only Reference(MedComMessagingOrganization)
+* agent.who ^type.aggregation = #bundled
 * agent.who ^definition = "Shall contain the messaging organization performing the activity. This also apply to an internal transmission to another messaging organization within a given system."
 * agent.who ^short = "A reference to the actor of the activity, which shall be a MedComMessagingOrganization. If more actors has been involved, the element must be sliced."
 * entity MS
