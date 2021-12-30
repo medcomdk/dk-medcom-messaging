@@ -7,7 +7,7 @@ Description: "Provenance information about the messages preceeding the current m
 * target ^short = "Targets the MedComMessagingMessageHeader from the previous message."
 * occurred[x] 1..
 * occurredDateTime 1.. MS
-* occurredDateTime ^short = "A human readable date and time for when the message is sent."
+* occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include both a date and a time including timezone."
 * recorded MS
 * recorded ^short = "A system readable date and time for when the message is sent."
 * activity 1.. MS
