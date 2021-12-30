@@ -34,7 +34,7 @@ Description: "Message Header for MedCom message bundles"
 * source MS
 * source.endpoint MS
 
-* event[x] ^short = "The MedComMessagingMessageHeader shall contain a value from MedComMessagingMessageTypes"
+* event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
@@ -42,8 +42,7 @@ Usage: #inline
 * valueCoding = $Use#primary
 
 
-Alias: $MessageEvents = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-eventCodes
-
+Alias: $MessageEvents = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-messageTypes
 
 Instance: 3881874e-2042-4a00-aee8-23512799f512
 InstanceOf: MedComMessagingMessageHeader

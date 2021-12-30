@@ -25,8 +25,9 @@ Description: "Provenance information about the messages preceeding the current m
 * agent.who ^definition = "Shall contain the messaging organization performing the activity. This also apply to an internal transmission to another messaging organization within a given system."
 * agent.who ^short = "A reference to the actor of the activity, which shall be a MedComMessagingOrganization. If more actors has been involved, the element must be sliced."
 * entity MS
+* entity ^definition = "Shall only be included if the current message is a response to a previous message."
 * entity.role MS
-* entity.role ^short = "When the message is the first in a thread, the role shall be 'source', when a message is a response, a correction or a forwarding message the role shall be 'revision' and when the message is a cancellation the role shall be 'removal'."
+* entity.role ^short = "When a message is a response, a correction or a forwarding message the role shall be 'revision' and when the message is a cancellation the role shall be 'removal'."
 * entity.what MS
 * entity.what ^short = "A reference to the previous message. If the previous message is a FHIR message, the reference element must be used and if the previous message is an EDIFACT or OIOXML, the identifier element must be used."
 * entity.what.identifier MS
