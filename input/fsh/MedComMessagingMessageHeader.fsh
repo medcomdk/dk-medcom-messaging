@@ -9,6 +9,7 @@ Description: "Message Header for MedCom message bundles"
 * id ^short = "Each message shall include a globally unique id."
 * event[x] MS
 * event[x] only Coding
+* event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 * eventCoding 1..
 * eventCoding from MedComMessagingMessageTypes
 * destination.extension contains MedComMessagingDestinationUseExtension named use 1..1
@@ -22,19 +23,20 @@ Description: "Message Header for MedCom message bundles"
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
+* destination[primary].receiver ^short = "The primary reciever of the message"
 * destination[cc].extension[use].valueCoding = $Use#cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS
 * destination[cc].receiver ^type.aggregation = #bundled
 * destination[cc].endpoint MS
-* destination[cc] ^definition = "Shall contain carbon copy recipients of the message"
+* destination[cc].receiver ^short = "The carbon copy reciever of the message. Is only used when a message has multiple recievers."
 * sender 1.. MS
 * sender ^type.aggregation = #bundled
 * sender only Reference(MedComMessagingOrganization)
+* sender ^short = "The actual sender of the message"
 * source MS
 * source.endpoint MS
-
-* event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
+* source ^short = "Contains the information about the target for the Acknowledgement message."
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
