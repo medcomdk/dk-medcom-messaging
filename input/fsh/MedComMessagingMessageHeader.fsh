@@ -5,6 +5,7 @@ Profile: MedComMessagingMessageHeader
 Parent: MessageHeader
 Id: medcom-messaging-messageHeader
 Description: "Message Header for MedCom message bundles"
+* id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
 * event[x] MS
