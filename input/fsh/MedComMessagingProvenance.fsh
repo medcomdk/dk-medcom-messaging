@@ -14,8 +14,8 @@ Description: "Provenance information about the messages preceeding the current m
 * activity from MedComMessagingActivityCodesValueset
 * activity ^definition = "Activity that occurred and triggered the current or a previous message"
 * activity.coding 1.. MS
-* activity.coding.system 1.. MS
-* activity.coding.system = "http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-activityCodes"
+// * activity.coding.system 1.. MS
+// * activity.coding.system = "http://medcomfhir.dk/fhir/messaging/ValueSet/medcom-messaging-activityCodes-ValueSet"
 * activity.coding.code 1.. MS
 * activity.coding.code ^definition = "The activity defined by the system"
 * agent 1.. MS
@@ -39,9 +39,6 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
 
 
-
-Alias: $ActivityCode = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-activityCodes
-
 // CareCommunication example
 
 Instance: 4c284936-5454-4116-95fc-3c8eeeed2400
@@ -52,7 +49,7 @@ Usage: #example
 * target = Reference(42cb9200-f421-4d08-8391-7d51a2503cb4)
 * occurredDateTime = 2020-09-28T12:34:56Z
 * recorded = 2020-09-28T12:34:56Z
-* activity = $ActivityCode#new-message
+* activity = #new-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 // CareCommunication reply example
@@ -65,7 +62,7 @@ Usage: #inline
 * target = Reference(b0d424f8-33a9-4cc2-a528-a6cc1c58727b)
 * occurredDateTime = 2020-09-28T12:34:56Z
 * recorded = 2020-09-28T12:34:56Z
-* activity = $ActivityCode#new-message
+* activity = #new-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 Instance: 30c0f779-783f-46b2-b38f-faebd2bedb3f
@@ -76,7 +73,7 @@ Usage: #example
 * target = Reference(b0d424f8-33a9-4cc2-a528-a6cc1c58727b)
 * occurredDateTime = 2020-09-30T10:22:11Z
 * recorded = 2020-09-30T10:22:11Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(42cb9200-f421-4d08-8391-7d51a2503cb4)
@@ -91,7 +88,7 @@ Usage: #inline
 * target = Reference(d5bd2111-2576-48d3-84d4-8be0297a038d)
 * occurredDateTime = 2020-09-28T12:34:56Z
 * recorded = 2020-09-28T12:34:56Z
-* activity = $ActivityCode#new-message
+* activity = #new-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 Instance: 7466d9f6-d3ae-4be5-8ed7-b333dad30205
@@ -102,7 +99,7 @@ Usage: #example
 * target = Reference(d5bd2111-2576-48d3-84d4-8be0297a038d)
 * occurredDateTime = 2020-09-30T10:22:11Z
 * recorded = 2020-09-30T10:22:11Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(42cb9200-f421-4d08-8391-7d51a2503cb4)
@@ -117,7 +114,7 @@ Usage: #example
 * target = Reference(aac67161-d0de-4933-a78c-060beafb4814)
 * occurredDateTime = 2020-10-16T13:43:16Z
 * recorded = 2020-10-16T13:43:16Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
@@ -130,7 +127,7 @@ Usage: #inline
 * target = Reference(aac67161-d0de-4933-a78c-060beafb4814)
 * occurredDateTime = 2020-10-15T13:44:14Z
 * recorded = 2020-10-15T13:45:15Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 // CareCommunication reply to XDIS message
@@ -143,7 +140,7 @@ Usage: #example
 * target = Reference(b0d424f8-33a9-4cc2-a528-a6cc1c58727b)
 * occurredDateTime = 2020-09-30T10:22:11Z
 * recorded = 2020-09-30T10:22:11Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what.identifier.value = "5790000120420#BrevNr00133"
@@ -159,7 +156,7 @@ Usage: #example
 * target = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
 * occurredDateTime = 2020-10-15T13:44:14Z
 * recorded = 2020-10-15T13:45:15Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 // Start leave example
@@ -172,7 +169,7 @@ Usage: #inline
 * target = Reference(b563a2b2-bf92-4b13-bbd2-0a021a95bded)
 * occurredDateTime = 2020-10-20T10:21:56Z
 * recorded = 2020-10-20T10:21:56Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 Instance: dc421d0a-cded-470f-9a53-2ddba7583baa
@@ -183,7 +180,7 @@ Usage: #example
 * target = Reference(b563a2b2-bf92-4b13-bbd2-0a021a95bded)
 * occurredDateTime = 2020-10-20T10:21:56Z
 * recorded = 2020-10-20T10:21:56Z
-* activity = $ActivityCode#start-leave-inpatient
+* activity = #start-leave-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #derivation
 * entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
@@ -198,7 +195,7 @@ Usage: #example
 * target = Reference(e47254da-f170-46f0-b624-4778a9c92b1f)
 * occurredDateTime = 2020-10-25T09:12:34Z
 * recorded = 2020-10-25T09:12:34Z
-* activity = $ActivityCode#end-leave-inpatient
+* activity = #end-leave-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #derivation
 * entity.what = Reference(b563a2b2-bf92-4b13-bbd2-0a021a95bded)
@@ -210,7 +207,7 @@ Description: "HospitalNotification example. The Provenance instance is only vali
 * target = Reference(e47254da-f170-46f0-b624-4778a9c92b1f)
 * occurredDateTime = 2020-10-20T10:21:56Z
 * recorded = 2020-10-20T10:21:56Z
-* activity = $ActivityCode#start-leave-inpatient
+* activity = #start-leave-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #derivation
 * entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
@@ -223,7 +220,7 @@ Usage: #inline
 * target = Reference(e47254da-f170-46f0-b624-4778a9c92b1f)
 * occurredDateTime = 2020-10-15T13:44:14Z
 * recorded = 2020-10-15T13:45:15Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 // Discharge example
@@ -236,7 +233,7 @@ Usage: #inline
 * target = Reference(01affa53-c157-4080-abb0-8e681524f969)
 * occurredDateTime = 2020-10-15T13:44:14Z
 * recorded = 2020-10-15T13:45:15Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 Instance: 2710698c-83eb-4c3e-81c8-fe8e40baf524
@@ -247,7 +244,7 @@ Usage: #example
 * target = Reference(01affa53-c157-4080-abb0-8e681524f969)
 * occurredDateTime = 2020-10-28T09:21:26Z
 * recorded = 2020-10-28T09:21:26Z
-* activity = $ActivityCode#discharge-inpatient-home
+* activity = #discharge-inpatient-home
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #derivation
 * entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
@@ -262,7 +259,7 @@ Usage: #inline
 * target = Reference(29b4818e-02de-4cc4-b418-d20cbc7b5404)
 * occurredDateTime = 2021-01-10T13:44:14Z
 * recorded = 2021-01-10T13:45:15Z
-* activity = $ActivityCode#admit-inpatient
+* activity = #admit-inpatient
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 //patient is deceased
@@ -274,7 +271,7 @@ Usage: #example
 * target = Reference(8efc6d95-6161-4493-99c9-f359488dedb8)
 * occurredDateTime = 2021-01-13T13:44:14Z
 * recorded = 2021-01-13T13:45:15Z
-* activity = $ActivityCode#discharge-inpatient-home
+* activity = #discharge-inpatient-home
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 
 
@@ -288,7 +285,7 @@ Usage: #example
 * target = Reference(6b027613-c442-406d-bc53-3d913f73e0a8)
 * occurredDateTime = 2021-09-21T07:15:43Z
 * recorded = 2021-09-21T07:15:43Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #derivation
 * entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
@@ -301,7 +298,7 @@ Description: "Provenance information for a medcom medcom acknowledgementmessage 
 * target = Reference(6b027613-c442-406d-bc53-3d913f73e0a8)
 * occurredDateTime = 2020-09-28T12:34:57Z
 * recorded = 2020-09-28T12:34:57Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(4c284936-5454-4116-95fc-3c8eeeed2400)
@@ -313,7 +310,7 @@ Description: "Provenance information for a medcom acknowledgementmessage - CareC
 * target = Reference(ff9055ec-b1f1-48b6-933a-063dff0a6faf)
 * occurredDateTime = 2020-09-28T12:34:57Z
 * recorded = 2020-09-28T12:34:57Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(b0d424f8-33a9-4cc2-a528-a6cc1c58727b)
@@ -325,7 +322,22 @@ Description: "Provenance information for a medcom acknowledgementmessage - CareC
 * target = Reference(4879c81e-0607-4ccb-b358-24a72208e30d)
 * occurredDateTime = 2020-09-30T10:22:12Z
 * recorded = 2020-09-30T10:22:12Z
-* activity = $ActivityCode#reply-message
+* activity = #reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #derivation
 * entity.what = Reference(b0d424f8-33a9-4cc2-a528-a6cc1c58727b)
+
+//HospitalNoficcation Instance: 
+Instance: 51b27813-8aa8-4fa1-846b-aeabf5afb7d4
+InstanceOf: MedComHospitalNotificationMessageHeader
+Title: "Message header for a hospital notification admit message. Valid only if used in a bundle (message)."
+Description: "Message header for a hospital notification admit message. Valid only if used in a bundle (message)."
+* destination.extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+* eventCoding = $MessageEvents#hospital-notification-message
+* destination.endpoint = "http://medcomfhir.dk/unknown"
+* destination.receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
+* sender = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
+* source.endpoint = "http://medcomfhir.dk/unknown"
+* focus = Reference(7790f964-88d3-4652-bbc8-81d2f3d035f8)
+* extension[reportOfAdmissionFlag].valueBoolean = true
+* extension[reportOfAdmissionRecipient].valueReference = Reference(bf839e87-4e44-4977-b38e-92b5a6f187b5)

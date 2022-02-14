@@ -45,7 +45,7 @@ Usage: #inline
 * valueCoding = $Use#primary
 
 
-Alias: $MessageEvents = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-messageTypes
+Alias: $MessageEvents = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-eventCodes
 
 Instance: 3881874e-2042-4a00-aee8-23512799f512
 InstanceOf: MedComMessagingMessageHeader
