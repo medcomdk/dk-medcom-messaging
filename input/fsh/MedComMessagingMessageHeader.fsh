@@ -1,6 +1,3 @@
-Alias: $Use = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-destinationUse
-
-
 Profile: MedComMessagingMessageHeader
 Parent: MessageHeader
 Id: medcom-messaging-messageHeader
@@ -13,6 +10,7 @@ Description: "Message Header for MedCom message bundles"
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 * eventCoding 1..
 * eventCoding from MedComMessagingMessageTypes
+* eventCoding.code 1..
 * destination.extension contains MedComMessagingDestinationUseExtension named use 1..1
 * destination.extension[use] MS
 * destination ^slicing.discriminator.type = #value
@@ -42,10 +40,8 @@ Description: "Message Header for MedCom message bundles"
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
 Usage: #inline
-* valueCoding = $Use#primary
+* valueCoding.code = $Use#primary
 
-
-Alias: $MessageEvents = http://medcomfhir.dk/fhir/core/1.0/CodeSystem/medcom-messaging-eventCodes
 
 Instance: 3881874e-2042-4a00-aee8-23512799f512
 InstanceOf: MedComMessagingMessageHeader

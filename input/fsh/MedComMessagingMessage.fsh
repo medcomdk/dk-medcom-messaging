@@ -17,18 +17,17 @@ Description: "Base resource for all MedCom messages."
 Invariant: medcom-messaging-1
 Description: "The message header shall conform to medcom-messaging-messageHeader profile"
 Severity: #error
-Expression: "entry.ofType(MessageHeader).all(resource.conformsTo('http://medcomfhir.dk/fhir/core/1.0/StructureDefinition/medcom-messaging-messageHeader'))"
+Expression: "entry.ofType(MessageHeader).all(resource.conformsTo('http://medcomfhir.dk/fhir/messaging/StructureDefinition/medcom-messaging-messageHeader'))"
 
 Invariant: medcom-messaging-2
 Description: "All provenance resources shall conform to medcom-core-provenance profile"
 Severity: #error
-Expression: "entry.ofType(Provenance).all(resource.conformsTo('http://medcomfhir.dk/fhir/core/1.0/StructureDefinition/medcom-messaging-provenance'))"
+Expression: "entry.ofType(Provenance).all(resource.conformsTo('http://medcomfhir.dk/fhir/messaging/StructureDefinition/medcom-messaging-provenance'))"
 
-Alias: $BundleType = http://hl7.org/fhir/bundle-type
 
 Instance: eb26be85-fdb7-454d-a980-95cba6d1745b
 InstanceOf: MedComMessagingMessage
-Description: "Example of an emty message."
+Description: "Example of an empty message."
 * type = $BundleType#message
 * timestamp = 2020-09-28T12:34:56Z
 * entry[+].fullUrl = "MessageHeader/3881874e-2042-4a00-aee8-23512799f512"
