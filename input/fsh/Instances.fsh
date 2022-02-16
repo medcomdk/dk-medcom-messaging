@@ -1,6 +1,6 @@
 // MedComCoreEncounter instance
 
-/* Instance: 7790f964-88d3-4652-bbc8-81d2f3d035f8
+Instance: 7790f964-88d3-4652-bbc8-81d2f3d035f8
 InstanceOf: MedComHospitalNotificationEncounter
 Title: "MedCom Hospital Notification Encounter in progress"
 Description: "Example of MedCom Hospital Noticication inpatient Encounter in progress with 12ee0dde-a672-462f-820d-5efe832d73c9 as serviceProvider"
@@ -11,7 +11,7 @@ Description: "Example of MedCom Hospital Noticication inpatient Encounter in pro
 * episodeOfCare[lpr3identifier].identifier.value = "87654321-1234-1234-1234-123456789012" 
 * subject = Reference(733cef33-3626-422b-955d-d506aaa65fe1)
 * period.start = 2020-10-15T13:44:14Z
-* serviceProvider = Reference(bf839e87-4e44-4977-b38e-92b5a6f187b5) */
+* serviceProvider = Reference(bf839e87-4e44-4977-b38e-92b5a6f187b5)
 
 Instance: 733cef33-3626-422b-955d-d506aaa65fe1
 InstanceOf: MedComCorePatient
@@ -38,7 +38,7 @@ Description: "A core organization with a SOR identifier."
 * identifier[sorIdentifier].value = "123456789012345"
 * name = "Aros Burn Center"
 
-/* //HospitalNoficcation Instance - Admit inpatient: 
+//HospitalNoficcation Instance - Admit inpatient: 
 Instance: 51b27813-8aa8-4fa1-846b-aeabf5afb7d4
 InstanceOf: MedComHospitalNotificationMessageHeader
 Title: "MessageHeader for a HospitalNotification admit inpatient message. Valid only if used in a bundle (message)."
@@ -64,7 +64,7 @@ Description: "MessageHeader for a HospitalNotification discharge inpatient messa
 * sender = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * source.endpoint = "http://medcomfhir.dk/unknown"
 * focus = Reference(7790f964-88d3-4652-bbc8-81d2f3d035f8)
-* extension[reportOfAdmissionFlag].valueBoolean = false */
+* extension[reportOfAdmissionFlag].valueBoolean = false
 
 
 /* //HospitalNotification - End admission inpatient. 
@@ -95,7 +95,7 @@ Usage: #inline
 * sender = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * source.endpoint = "http://medcom.dk/unknown"
 * focus = Reference(0f8cde6a-d369-4d94-a2ce-c2cc45fd75fb) */
-/* 
+
 // CareCommunication reply example
 Instance: b0d424f8-33a9-4cc2-a528-a6cc1c58727b
 InstanceOf: MedComCareCommunicationMessageHeader
@@ -137,7 +137,7 @@ Usage: #inline
 * sent = 2020-10-16T13:43:16Z
 * payload[0].contentString = "The patient is easily confused. Speaking loudly and slow reduced this."
 * payload[0].extension[date].valueDateTime = 2020-01-01
-* payload[0].extension[author].valueReference = Reference(58c811a5-4082-44eb-9d66-ccbb112d4973) */
+* payload[0].extension[author].valueReference = Reference(58c811a5-4082-44eb-9d66-ccbb112d4973)
 
 
 // Practitioners
@@ -147,7 +147,7 @@ Title: "Simple practitioner with a name"
 Description: "Simple practitioner with a name"
 * name.given = "Michael"
 * name.family = "Burns"
-/* 
+
 Instance: 6b027613-c442-406d-bc53-3d913f73e0a8
 InstanceOf: MedComMessagingAcknowledgementHeader
 Title: "Message header for a fatal-error message with provenance"
@@ -160,7 +160,7 @@ Description: "Message header for a fatal-error message with provenance"
 * source.endpoint = "http://medcomfhir.dk/unknown"
 * response.identifier = "15e5b880-c087-4055-b9ec-99108695f81d"
 * response.code = $AcknowledgementCode#fatal-error
-* response.details = Reference(d0055484-2a56-4da2-81b8-a9d5087d865c) */
+* response.details = Reference(d0055484-2a56-4da2-81b8-a9d5087d865c)
 
 
 Instance: d0055484-2a56-4da2-81b8-a9d5087d865c

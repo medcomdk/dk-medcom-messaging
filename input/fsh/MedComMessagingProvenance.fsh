@@ -38,7 +38,7 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.reference ^definition = "Shall contain the message header id of messages given as input to the activity"
 * entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
 
-/* // CareCommunication new message
+// CareCommunication new message
 Instance: 9c284936-5454-4116-95fc-3c8eeeed2400
 InstanceOf: MedComMessagingProvenance
 Title: "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"
@@ -92,10 +92,10 @@ Usage: #example
 * activity.coding = $activityCodes#reply-message
 * agent.who = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * entity.role = #revision
-* entity.what.identifier.value = "5790000120420#BrevNr00133" */
+* entity.what.identifier.value = "5790000120420#BrevNr00133"
 
 
-/* // HospitalNotification Admit inpatient. 
+// HospitalNotification Admit inpatient. 
 Instance: d7cf3888-6f42-4e4d-929c-d2475d24fba0
 InstanceOf: MedComMessagingProvenance
 Title: "HospitalNotification example. The Provenance instance is only valid if used in a bundle (message) - admit inpatient"
@@ -147,7 +147,7 @@ Usage: #example
 * activity.coding = $activityCodes#reply-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #revision
-* entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4) */
+* entity.what = Reference(51b27813-8aa8-4fa1-846b-aeabf5afb7d4)
 
 
 
