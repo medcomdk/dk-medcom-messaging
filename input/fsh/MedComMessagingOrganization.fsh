@@ -8,24 +8,14 @@ Description: "A formally recognized organizations registered for exchanging mess
 * identifier[eanIdentifier] only MedComCoreEANIdentifier
 
 // Reciever instance
-/* Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
+ Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
 InstanceOf: MedComMessagingOrganization
 Title: "Example of a reciever organization with a SOR and an EAN identifier."
 Description: "Example of an organization with a SOR and an EAN identifier."
 Usage: #example
 * identifier[sorIdentifier].value = "543210987654321"
 * identifier[eanIdentifier].value = "5790000121526"
-* name = "Receiver Organization" */
-
-Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
-InstanceOf: MedComMessagingOrganization
-Title: "Example of a reciever organization with a SOR and an EAN identifier."
-Description: "Example of an organization with a SOR and an EAN identifier."
-* identifier[sorIdentifier].system = "urn:oid:1.2.208.176.1.1"
-* identifier[sorIdentifier].value = "5790000121526"
-* identifier[eanIdentifier].system = "urn:oid:1.3.88"
-* identifier[eanIdentifier].value = "543210987654321"
-* name = "Receiver Organization"
+* name = "Receiver Organization" 
 
 // Sender instance
 Instance: d7056980-a8b2-42aa-8a0e-c1fc85d1f40d
