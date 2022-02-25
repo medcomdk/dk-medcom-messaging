@@ -25,6 +25,7 @@ Description: "Activity codes for MedCom messages"
 * #revise-discharge-inpatient-home "Update of End hospital Stay"
 * #cancel-discharge-emergency-home "Cancellation of End hospital Stay"
 * #cancel-discharge-inpatient-home "Cancellation of End hospital Stay"
+* #acknowledgment "Acknowledgement message"
 
 
 ValueSet: MedComMessagingActivityCodesValueset
