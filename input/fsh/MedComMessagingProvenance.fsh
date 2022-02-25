@@ -71,7 +71,7 @@ Usage: #example
 * target = Reference(d28b9cb4-8feb-11ec-b909-0242ac120002)
 * occurredDateTime = 2021-09-21T07:15:43Z
 * recorded = 2021-09-21T07:15:43Z
-* activity.coding = $activityCodes#reply-message
+* activity.coding = $activityCodes#acknowledgment
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
 * entity.role = #revision
 * entity.what = Reference(9c284936-5454-4116-95fc-3c8eeeed2400)
