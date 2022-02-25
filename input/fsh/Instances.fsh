@@ -18,9 +18,8 @@ Instance: 12ee0dde-a672-462f-820d-5efe832d73c9
 InstanceOf: MedComCoreOrganization
 Title: "Aros Burn Center"
 Description: "A core organization with a SOR identifier."
-* identifier[sorIdentifier].use = #official
-* identifier[sorIdentifier].system = "urn:oid:1.2.208.176.1.1"
-* identifier[sorIdentifier].value = "123456789012345"
+* identifier[SOR-ID].use = #official
+* identifier[SOR-ID].value = "123456789012345"
 * name = "Aros Burn Center"
 
 // Practitioner

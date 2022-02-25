@@ -1,11 +1,20 @@
-Profile: MedComMessagingOrganization
+/* Profile: MedComMessagingOrganization
 Parent: MedComCoreOrganization
 Id: medcom-messaging-organization
 Description: "A formally recognized organizations registered for exchanging messages within Danish healthcare, registered with a SOR identifier issued by The Danish Health Data Authority"
 * . ^short = "A formally recognized organizations within Danish healthcare"
 * identifier 2.. MS
 * identifier contains eanIdentifier 1..1 MS
-* identifier[eanIdentifier] only MedComCoreEANIdentifier
+* identifier[eanIdentifier] only MedComCoreEANIdentifier */
+
+Profile: MedComMessagingOrganization
+Parent: MedComCoreOrganization
+Id: medcom-messaging-organization
+Description: "A formally recognized organizations registered for exchanging messages within Danish healthcare, registered with a SOR identifier issued by The Danish Health Data Authority"
+* . ^short = "A formally recognized organizations within Danish healthcare"
+* identifier 2.. MS
+* identifier[EAN-ID] 1.. 
+* identifier[EAN-ID] MS
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
@@ -13,8 +22,8 @@ InstanceOf: MedComMessagingOrganization
 Title: "Example of a reciever organization with a SOR and an EAN identifier."
 Description: "Example of an organization with a SOR and an EAN identifier."
 Usage: #example
-* identifier[sorIdentifier].value = "543210987654321"
-* identifier[eanIdentifier].value = "5790000121526"
+* identifier[SOR-ID].value = "543210987654321"
+* identifier[EAN-ID].value = "5790000121526"
 * name = "Receiver Organization" 
 
 // Sender instance
@@ -23,8 +32,8 @@ InstanceOf: MedComMessagingOrganization
 Title: "Example of a sender organization with a SOR and an EAN identifier."
 Description: "Example of an organization with a SOR and an EAN identifier."
 Usage: #example
-* identifier[sorIdentifier].value = "123456789012345"
-* identifier[eanIdentifier].value = "5790001382445"
+* identifier[SOR-ID].value = "123456789012345"
+* identifier[EAN-ID].value = "5790001382445"
 * name = "Sender Organization"
 
 // Service provider instance
@@ -33,5 +42,5 @@ InstanceOf: MedComMessagingOrganization
 Title: "Example of a service provider organization with a SOR and an EAN identifier."
 Description: "Example of an organization with a SOR and an EAN identifier."
 Usage: #example
-* identifier[sorIdentifier].value = "654321098765432"
-* identifier[eanIdentifier].value = "5790000121530"
+* identifier[SOR-ID].value = "325421000016001"
+* identifier[EAN-ID].value = "5798002472264"
