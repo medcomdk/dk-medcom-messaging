@@ -30,6 +30,10 @@ Description: "Activity codes for MedCom messages"
 
 ValueSet: MedComMessagingActivityCodesValueset
 Id: medcom-messaging-activityCodes-ValueSet
-Title: "MedComMessagingActivityCodes"
-Description: "ValueSet containing activity codes for MedCom messages"
-* include codes from system MedComMessagingActivityCodes
+Title: "MedComMessagingActivityCodesValueset"
+Description: "ValueSet containing generic activity codes for MedCom messages"
+* medcom-messaging-activityCodes#new-message "A new message has been sent"
+* medcom-messaging-activityCodes#reply-message "A message has been replied to"
+* medcom-messaging-activityCodes#forward-message "A message has been forwarded and potentially changed"
+* medcom-messaging-activityCodes#modified-message "A message has been modified"
+* medcom-messaging-activityCodes#retract-message "A message has been retracted/cancelled"

@@ -1,7 +1,7 @@
 Profile: MedComMessagingMessageHeader
 Parent: MessageHeader
 Id: medcom-messaging-messageHeader
-Description: "Message Header for MedCom message bundles"
+Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
@@ -36,6 +36,8 @@ Description: "Message Header for MedCom message bundles"
 * source MS
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
+* text MS
+* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
@@ -60,6 +62,7 @@ InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message). NB: A CareCommunication message shall use a CareCommunicationMessageHeader, as some elements and invariants are missing."
 * destination.extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+//* text.status = #extensions
 * eventCoding = $MessageEvents#care-communication-message
 * destination.endpoint = "http://medcomfhir.dk/unknown"
 * destination.receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
