@@ -10,7 +10,11 @@ Description: "Base resource for all MedCom messages."
 * timestamp 1.. MS
 * entry MS
 * entry.resource 1.. MS
-* entry ^short = "Message content (MedComMessagingMessageHeader, MedComMessagingProvenance, MedComMessagingOrganization) - Open"
+* entry.resource ^short = "Each MedCom message shall contain a MedComMessagingMessageHeader, MedComMessagingProvenance, and MedComMessagingOrganization or inherited profiles hereof."
+* entry.resource only
+    MessageHeader or 
+    Provenance or 
+    Organization
 * obeys medcom-messaging-1
 * obeys medcom-messaging-2
 
@@ -32,6 +36,8 @@ Description: "Example of an empty message."
 * timestamp = 2020-09-28T12:34:56Z
 * entry[+].fullUrl = "MessageHeader/3881874e-2042-4a00-aee8-23512799f512"
 * entry[=].resource = 3881874e-2042-4a00-aee8-23512799f512
+* entry[+].fullUrl = "Provenance/f61adfbe-d50f-11ec-9d64-0242ac120002"
+* entry[=].resource = f61adfbe-d50f-11ec-9d64-0242ac120002
 * entry[+].fullUrl = "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"
 * entry[=].resource = d7056980-a8b2-42aa-8a0e-c1fc85d1f40d
 * entry[+].fullUrl = "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"

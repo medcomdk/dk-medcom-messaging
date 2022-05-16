@@ -62,7 +62,6 @@ InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message). NB: A CareCommunication message shall use a CareCommunicationMessageHeader, as some elements and invariants are missing."
 * destination.extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
-//* text.status = #extensions
 * eventCoding = $MessageEvents#care-communication-message
 * destination.endpoint = "http://medcomfhir.dk/unknown"
 * destination.receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)

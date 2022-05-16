@@ -47,3 +47,15 @@ Usage: #example
 * recorded = 2020-09-28T12:34:56Z
 * activity.coding = $activityCodes#new-message
 * agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
+
+// Provenance for an empty message
+Instance: f61adfbe-d50f-11ec-9d64-0242ac120002
+InstanceOf: MedComMessagingProvenance
+Title: "Provenance for an empty message - new message"
+Description: "Provenance for an empty message - new message"
+Usage: #inline
+* target = Reference(3881874e-2042-4a00-aee8-23512799f512)
+* occurredDateTime = 2020-09-28T12:34:56Z
+* recorded = 2020-09-28T12:34:56Z
+* activity.coding = $activityCodes#new-message
+* agent.who = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)
