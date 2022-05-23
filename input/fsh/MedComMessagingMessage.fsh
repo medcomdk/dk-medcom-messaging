@@ -32,6 +32,7 @@ Expression: "entry.ofType(Provenance).all(resource.conformsTo('http://medcomfhir
 
 Instance: eb26be85-fdb7-454d-a980-95cba6d1745b
 InstanceOf: MedComMessagingMessage
+Title: "Bundle used in an empty message."
 Description: "Example of an empty message."
 * type = $BundleType#message
 * timestamp = 2020-09-28T12:34:56Z

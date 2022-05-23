@@ -5,10 +5,10 @@ Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
-* event[x] MS
+* event[x] 
 * event[x] only Coding
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
-* eventCoding 1..
+* eventCoding 1.. MS
 * eventCoding from MedComMessagingMessageTypes
 * eventCoding.code 1..
 * destination.extension contains MedComMessagingDestinationUseExtension named use 1..1
