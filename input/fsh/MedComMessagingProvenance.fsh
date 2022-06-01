@@ -4,7 +4,7 @@ Id: medcom-messaging-provenance
 Description: "Provenance information about the messages preceeding the current message"
 * target 1..1 MS
 * target only Reference(MedComMessagingMessageHeader)
-* target ^short = "Targets the MedComMessagingMessageHeader from the previous message."
+* target ^short = "Targets the MedComMessagingMessageHeader from the current message."
 * occurredDateTime 1.. MS
 * occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include a date, a time and timezone."
 * recorded MS

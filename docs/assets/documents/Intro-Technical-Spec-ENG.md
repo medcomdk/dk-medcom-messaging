@@ -2,12 +2,12 @@
 
 ----- UPDATE TO MEDCOM MESSAGING ---------
 
-> In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core/" target="_blank">MedCom Core Implementation Guide (IG)</a>
+> In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
 
-The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core/" target="_blank">MedCom Core IG</a> describes five FHIR profiles, which can be seen below. 
+## Content Overview
 
-
+The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;max-width:65%;}
@@ -29,34 +29,32 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-core/" target="_blank"
 </thead>
 <tbody>
   <tr>
-    <td class="tg-ne9s">MedComCorePatient</td>
-    <td class="tg-ne9s">Patient</td>
-    <td class="tg-ne9s">A citizen or patient, when a MedCom message about the person.</td>
-    <td class="tg-ne9s">Identifier (CPR-number)<br>Name<br>Address<br>Telecom<br>Managing Organization<br>Deceased or not</td>
+    <td class="tg-ne9s">MedComMessagingMessage</td>
+    <td class="tg-ne9s">Bundle</td>
+    <td class="tg-ne9s">Acts as a container for the content of the message. The type of the Bundle shall always be 'message'.</td>
+    <td class="tg-ne9s">Message id<br>Timestamp<br>Reference to all included profiles</td>
   </tr>
   <tr>
-    <td class="tg-ne9s">MedComCoreOrganization</td>
+    <td class="tg-ne9s">MedComMessagingMessageHeader</td>
+    <td class="tg-ne9s">MessageHeader</td>
+    <td class="tg-ne9s">Shall always be the first referenced profile, when the type of the Bundle is 'message'.</td>
+    <td class="tg-ne9s">MessagHeader id<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
+  </tr>
+  <tr>
+    <td class="tg-ne9s">MedComMessagingOrganization</td>
     <td class="tg-ne9s">Organization</td>
-    <td class="tg-ne9s">Information useful to identify an organization.</td>
-    <td class="tg-ne9s">Identifier (SOR-id)<br>Name</td>
+    <td class="tg-ne9s">Information usefull to identify a messaging organization</td>
+    <td class="tg-ne9s">Identifier (SOR-id)<br>Identifier (EAN/GLN-number)<br>Name</td>
   </tr>
   <tr>
-    <td class="tg-ne9s">MedComCoreEncounter</td>
-    <td class="tg-ne9s">Encounter</td>
-    <td class="tg-ne9s">A meeting between a healthcare professional and a patient.</td>
-    <td class="tg-ne9s">Encounter status <br>Encounter classification<br>Subject of the encounter<br>Episode of care identifier<br>Service provider organization </td>
-  </tr>
-  <tr>
-    <td class="tg-ne9s">MedComCorePractitioner</td>
-    <td class="tg-ne9s">Practitioner</td>
-    <td class="tg-ne9s">Information about a healthcare professional </td>
-    <td class="tg-ne9s">Name</td>
-  </tr>
-  <tr>
-    <td class="tg-ne9s">MedComCorePractitionerRole</td>
-    <td class="tg-ne9s">PractitionerRole</td>
-    <td class="tg-ne9s">The role of the healthcare professional</td>
-    <td class="tg-ne9s">References a practitioner</td>
+    <td class="tg-ne9s">MedComMessagingProvenance</td>
+    <td class="tg-ne9s">Provenance</td>
+    <td class="tg-ne9s">Information about the activity of the current message and which organization has triggered the message. Further it describes the history of message activities.</td>
+    <td class="tg-ne9s">Targets the MessageHeader<br>Timestamps<br>Activity of the message<br>Sender organization<br>If the message is a response to a previuos message</td>
   </tr>
 </tbody>
 </table>
+
+## General Messaging Model
+
+![GeneralMessagingModel - test](input/images/MessagingModel.png) 
