@@ -1,7 +1,5 @@
 # Introduction to the Technical Content
 
------ UPDATE TO MEDCOM MESSAGING ---------
-
 > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
 
@@ -56,5 +54,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 </table>
 
 ## General Messaging Model
+
+The figure below illustrates the general messaging model, which all MedCom messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced, as illustrated with MedComMessagingMessageHeader and MedComMessagingProvenance. MedComMessagingMessageHeader references the sender, receiver and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content, like an Encounter or a Communication profile, in the message is referenced from the focus element inMedComMessagingMessageHeader.
 
 ![GeneralMessagingModel - test](input/images/MessagingModel.png) 

@@ -5,3 +5,5 @@ description: "MedCom standard based on HL7 FHIR"
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+version: "Version 1.0.0-alpha.1"
+fhir_version: "FHIR R4"
