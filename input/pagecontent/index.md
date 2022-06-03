@@ -10,7 +10,7 @@ __Note:__ Be aware that entries in a message in general are unordered. Recipient
 
 The figure below illustrates a general messaging model, which all MedCom messages will comply to. The general messaging profiles are all prefixed "MedComMessaging". Besides the profiles on the figure, a MedCom message will also include some MedComCore profiles and profiles made to support a specific use case. All together the constitutes the actual content of the messages. The following sections describe the overall purpose of each messaging profile.
 
-<img alt="Shows the general MedCom messaging model. Each message must at least contain the following resources: Bundle, MessageHeader, Organization and Provenance." src="./MessagingModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
+<img alt="Shows the general MedCom messaging model. Each message must at least contain the following resources: Bundle, MessageHeader, Organization and Provenance." src="../docs/assets/images/MessagingModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
 ##### MedComMessagingMessage
 
