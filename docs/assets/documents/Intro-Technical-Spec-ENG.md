@@ -57,4 +57,4 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 
 The figure below illustrates the general messaging model, which all MedCom messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced, as illustrated with MedComMessagingMessageHeader and MedComMessagingProvenance. MedComMessagingMessageHeader references the sender, receiver and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content, like an Encounter or a Communication profile, in the message is referenced from the focus element inMedComMessagingMessageHeader.
 
-![GeneralMessagingModel - test](./images/MessagingModel.png) 
+![GeneralMessagingModel - test](./MessagingModel.png) 
