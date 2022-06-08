@@ -35,7 +35,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
   <tr>
     <td class="tg-ne9s">MedComMessagingMessageHeader</td>
     <td class="tg-ne9s">MessageHeader</td>
-    <td class="tg-ne9s">The header of a message, from this profile is the vital information in a message referenced. This profile shall always be the first referenced profile, when the type of the Bundle is 'message'.</td>
+    <td class="tg-ne9s">The header of a message, which profile shall always be the first referenced profile, when the type of the Bundle is 'message'. This profile holds references to the fundamental information in a message such as sender, receiver and the content of the message.</td>
     <td class="tg-ne9s">MessagHeader id<br>Narrative text<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
