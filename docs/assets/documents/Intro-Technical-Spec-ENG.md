@@ -35,8 +35,8 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
   <tr>
     <td class="tg-ne9s">MedComMessagingMessageHeader</td>
     <td class="tg-ne9s">MessageHeader</td>
-    <td class="tg-ne9s">Shall always be the first referenced profile, when the type of the Bundle is 'message'.</td>
-    <td class="tg-ne9s">MessagHeader id<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
+    <td class="tg-ne9s">The header of a message, from this profile is the vital information in a message referenced. This profile shall always be the first referenced profile, when the type of the Bundle is 'message'.</td>
+    <td class="tg-ne9s">MessagHeader id<br>Narrative text<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
     <td class="tg-ne9s">MedComMessagingOrganization</td>
@@ -55,6 +55,6 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 
 ## General Messaging Model
 
-The figure below illustrates the general messaging model, which all MedCom messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced, as illustrated with MedComMessagingMessageHeader and MedComMessagingProvenance. MedComMessagingMessageHeader references the sender, receiver and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content, like an Encounter or a Communication profile, in the message is referenced from the focus element inMedComMessagingMessageHeader.
+The figure below illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced, as illustrated with MedComMessagingMessageHeader and MedComMessagingProvenance. MedComMessagingMessageHeader references the sender, receiver and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content, like an Encounter or a Communication profile in the message, is referenced from the focus element inMedComMessagingMessageHeader.
 
-![GeneralMessagingModel - test](./MessagingModel.png) 
+![General Messaging Model when exchanging a MedCom FHIR Message.](../images/MessagingModel.png) 

@@ -1,8 +1,5 @@
 # Release Note
 
------ UPDATE TO MEDCOM MESSAGING ---------
-
-
 As described in [Versioning DOC], the Implementation Guide (IG) and the textual documentation will have different versions, why there are two release notes in the following.
 
 ## Implementation Guide
@@ -36,7 +33,7 @@ In the table below updates of the <a href="../index.md" target="_blank">MedCom C
     <td class="tg-ne9s">1.0.0-a.1</td>
     <td class="tg-ne9s">31-05-2022</td>
     <td class="tg-ne9s">TMS</td>
-    <td class="tg-ne9s">Inital release. Presentation of MedCom Core.</td>
+    <td class="tg-ne9s">Inital release. Presentation of MedCom Messaging.</td>
   </tr>
   <tr>
     <td class="tg-ne9s"></td>
