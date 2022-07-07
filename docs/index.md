@@ -20,7 +20,7 @@ In the documentation below you will find the necessary content to understand the
 
 #### Implementation Guide
 
-The IG holds the technical specifications and examples of the MedCom Messaging profiles. It represents the base expectations when sending a message, including the sender and receiver organizations and the messaging history.
+The IG contains the technical specifications and examples of the MedCom Messaging profiles. It represents the base expectations when sending a message, including the sender and receiver organizations and the messaging history.
 
 <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Tab here to see the IG for MedCom Messaging.</a>
 
