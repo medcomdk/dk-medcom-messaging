@@ -1,12 +1,3 @@
-/* Profile: MedComMessagingOrganization
-Parent: MedComCoreOrganization
-Id: medcom-messaging-organization
-Description: "A formally recognized organizations registered for exchanging messages within Danish healthcare, registered with a SOR identifier issued by The Danish Health Data Authority"
-* . ^short = "A formally recognized organizations within Danish healthcare"
-* identifier 2.. MS
-* identifier contains eanIdentifier 1..1 MS
-* identifier[eanIdentifier] only MedComCoreEANIdentifier */
-
 Profile: MedComMessagingOrganization
 Parent: MedComCoreOrganization
 Id: medcom-messaging-organization
