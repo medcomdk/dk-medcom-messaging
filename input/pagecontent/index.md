@@ -2,19 +2,19 @@
 
 This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR &reg;&copy; in message based exchange of data in Danish healthcare.
 
-The IG contains profiles, which defines a general messaging model for MedCom messages, like HospitalNotification, CareCommunication and Acknowledgement. 
-
-__Note:__ Be aware that entries in a message in general are unordered. Recipients of a message can therefore not assume any sequences of elements.
+The IG contains profiles which are used to define a general messaging model for MedCom messages, like [HospitalNotification](https://build.fhir.org/ig/medcomdk/dk-medcom-hospitalnotification/), [CareCommunication](https://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication/) and [Acknowledgement](https://build.fhir.org/ig/medcomdk/dk-medcom-acknowledgement/). 
 
 #### General Messaging Model
 
-The figure below illustrates a general messaging model, which all MedCom messages will comply to. The general messaging profiles are all prefixed "MedComMessaging". Besides the profiles on the figure, a MedCom message will also include some MedComCore profiles and profiles made to support a specific use case. All together the constitutes the actual content of the messages. The following sections describe the overall purpose of each messaging profile.
+The figure below illustrates a general messaging model, which all MedCom messages will comply to. The general messaging profiles are all prefixed "MedComMessaging". Beside the profiles on the figure, a MedCom message will also include some MedComCore profiles and profiles made to support a specific use case. All together they constitutes the actual content of the messages. The following sections describe the overall purpose of each messaging profile.
 
 <img alt="Shows the general MedCom messaging model. Each message must at least contain the following resources: Bundle, MessageHeader, Organization and Provenance." src="./MessagingModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 
 ##### MedComMessagingMessage
 
 A Bundle resource defined to be of the type 'message'. All profiles included in a message shall be referenced from the entry element in the MedComMessagingMessage profile, with a MessageHeader as the first resource. 
+
+__Note:__ Be aware that entries in a message in general are unordered. Recipients of a message can therefore not assume any sequences of elements.
 
 ##### MedComMessagingMessageHeader
 
