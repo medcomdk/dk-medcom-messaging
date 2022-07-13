@@ -10,6 +10,8 @@ class "MedComMessagingProvenance" as provenance
 message -- messageHeader : "entry"
 message -- provenance : "entry"
 
+provenance -- organization : "agent.who"
+
 messageHeader -- organization : "sender"
 messageHeader -- organization : "receiver"
 messageHeader -- organization : "carbon-copy"
