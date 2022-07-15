@@ -61,7 +61,7 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 
 
 <figure>
-<img src="../images/MessagingModel.png" alt="General Messaging Model when exchanging a MedCom FHIR Message." style="width:75%" id="Fig1">
+<img src="../images/MessagingModel.png" alt="General Messaging Model when exchanging a MedCom FHIR Message." style="width:65%" id="Fig1">
 <figcaption align = "center"><b>Figure 1: Messaging model over exchanging a MedCom FHIR Message </b> </figcaption>
 </figure>
 
