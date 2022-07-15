@@ -1,34 +1,29 @@
+<a href="https://medcomdk.github.io/MedComLandingPage/" target="_blank">Return</a>
+
 # MedCom Messaging 
+This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
+* MedComMessagingMessage 
+* MedComMessagingMessageHeader
+* MedComMessagingMessagingOrganization
+* MedComMessagingMessagingProvenance<br><br>
 
-This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR standards. The messaging profiles are static and used across MedComs messaging standards, currently including HospitalNotification, CareCommunication and Acknowledgement. The messaging profiles do not alone constitute a standard, but one or more profiles will be used in a standard. Therefore does this page only include the Implementation Guide (IG) and not clinical guidelines, use cases, test protocols. 
+These profiles describe fundamental information when exchanging information as messages and therefore one or more profiles are included in all MedComs FHIR messages. The messaging profiles do not alone constitute a standard, but one or more profiles can be used in a standard. Therefore, does this page only include the Implementation Guide (IG) and not clinical guidelines, use cases, test protocols.
 
-<a href="https://medcomdk.github.io/MedComLandingPage/" target="_blank">Return to frontpage</a>
 
 **Table of Content**
 - [MedCom Messaging](#medcom-messaging)
-  * [1 Documentation](#1-documentation)
+  * [Documentation](#documentation)
     + [Technical Specifications](#technical-specifications)
-      - [Implementation Guide](#implementation-guide)
-      - [Introduction to the Technical Specifications](#introduction-to-the-technical-specifications)
   * [2 Release Notes](#2-release-notes)
 
-## 1 Documentation 
-
-In the documentation below you will find the necessary content to understand the technical specifications for the messaging profiles. 
-
+## Documentation 
 ### Technical Specifications
+The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the MedCom Messaging profiles not alone compose a standard but are used to describe central information in MedComs messaging standards. <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Here you can find the MedCom Messaging IG.</a> 
 
-#### Implementation Guide
-
-The IG contains the technical specifications and examples of the MedCom Messaging profiles. It represents the base expectations when sending a message, including the sender and receiver organizations and the messaging history.
-
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Tab here to see the IG for MedCom Messaging.</a>
-
-#### Introduction to the Technical Specifications
-
-The purpose of this section is to give a brief and overall introduction to the content of the messaging profiles. It describes the most basic content and cannot stand alone during implementation. 
-
+IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the messaging IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system
 [Overview of the content of the messaging profiles.](assets/documents/Intro-Technical-Spec-ENG.md)
+
+
 
 ## 2 Release Notes
 

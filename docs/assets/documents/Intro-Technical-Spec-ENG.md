@@ -8,7 +8,7 @@
 The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;max-width:65%;}
+.tg  {border-collapse:collapse;border-spacing:0;max-width:85%;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -17,11 +17,12 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 .tg .tg-ne9s{color:#343434;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
-<thead>
+<caption style="color:#2c415c;font-weight:bold; text-align:center"> Tabel 1: Overview of MedCom Messaging Profiles  </caption>
+<thead id="Tab1">
   <tr>
     <th class="tg-uaof">Profile</th>
     <th class="tg-uaof">Resource</th>
-    <th class="tg-uaof">Describtion</th>
+    <th class="tg-uaof">Description</th>
     <th class="tg-uaof">MustSupport elements</th>
   </tr>
 </thead>
@@ -35,7 +36,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
   <tr>
     <td class="tg-ne9s">MedComMessagingMessageHeader</td>
     <td class="tg-ne9s">MessageHeader</td>
-    <td class="tg-ne9s">The header of a message, which profile shall always be the first referenced profile, when the type of the Bundle is 'message'. This profile holds references to the fundamental information in a message such as sender, receiver and the content of the message.</td>
+    <td class="tg-ne9s">The header of a message. This profile holds references to the fundamental information in a message such as sender, receiver, and the content of the message.</td>
     <td class="tg-ne9s">MessagHeader id<br>Narrative text<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
@@ -55,6 +56,11 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 
 ## General Messaging Model
 
-The figure below illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced, as illustrated with MedComMessagingMessageHeader and MedComMessagingProvenance. MedComMessagingMessageHeader references the sender, receiver and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content, like an Encounter or a Communication profile in the message, is referenced from the focus element inMedComMessagingMessageHeader.
+The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a>) illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced. MedComMessagingMessageHeader references the sender, receiver, and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content of the message, like an Encounter in HospitalNotification or a Communication in CareCommunication, is referenced from the focus element in MedComMessagingMessageHeader
 
-![General Messaging Model when exchanging a MedCom FHIR Message.](../images/MessagingModel.png) 
+
+<figure>
+<img src="../images/MessagingModel.png" alt="General Messaging Model when exchanging a MedCom FHIR Message." style="width:85%" id="Fig1">
+<figcaption align = "center"><b>Figure 1: Messaging model over exchanging a MedCom FHIR Message
+</figure>
+
