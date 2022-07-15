@@ -14,7 +14,7 @@ These profiles describe fundamental information when exchanging information as m
 - [MedCom Messaging](#medcom-messaging)
   * [Documentation](#documentation)
     + [Technical Specifications](#technical-specifications)
-  * [2 Release Notes](#2-release-notes)
+  * [2 Release Notes](#2-release-notes)<br><br>
 
 ## Documentation 
 ### Technical Specifications
