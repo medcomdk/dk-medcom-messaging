@@ -11,13 +11,12 @@ These profiles describe fundamental information when exchanging information as m
 
 
 **Table of Content**
-- [MedCom Messaging](#medcom-messaging)
-  * [Documentation](#documentation)
-    + [Technical Specifications](#technical-specifications)
-  * [Release Notes](#release-notes)<br><br>
+* [1 Documentation](#1-documentation)
+  + [1.1 Technical Specifications](#11-technical-specifications)
+* [2 Release Notes](#2-release-notes)<br><br>
 
-## Documentation 
-### Technical Specifications
+## 1 Documentation 
+### 1.1 Technical Specifications
 The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the MedCom Messaging profiles not alone compose a standard but are used to describe central information in MedComs messaging standards. <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Here you can find the MedCom Messaging IG.</a> 
 
 IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the messaging IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system
@@ -25,6 +24,6 @@ IGs might be difficult for people with little or no knowledge about FHIR and how
 
 
 
-## Release Notes
+## 2 Release Notes
 
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md)

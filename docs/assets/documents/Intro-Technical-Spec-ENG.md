@@ -17,7 +17,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 .tg .tg-wqo7{color:#2c415c;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
-<caption style="color:#2c415c;font-weight:bold; text-align:center"> Tabel 1: Overview of MedCom Messaging Profiles  </caption>
+<caption style="color:#2c415c; font-weight:bold;text-align:center"> Tabel 1: Overview of MedCom Messaging Profiles  </caption>
 <thead>
   <tr>
     <th class="tg-wqo7"><span style="font-weight:bold">Profile</span></th>
