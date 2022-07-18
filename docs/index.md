@@ -2,10 +2,10 @@
 
 # MedCom Messaging 
 This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
-* MedComMessagingMessage 
-* MedComMessagingMessageHeader
-* MedComMessagingMessagingOrganization
-* MedComMessagingMessagingProvenance<br><br>
+* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> 
+* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> 
+* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html"> MedComMessagingMessagingOrganization </a> 
+* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingMessagingProvenance </a> <br><br>
 
 These profiles describe fundamental information when exchanging information as messages and therefore one or more profiles are included in all MedComs FHIR messages. The messaging profiles do not alone constitute a standard, but one or more profiles can be used in a standard. Therefore, does this page only include the Implementation Guide (IG) and not clinical guidelines, use cases, test protocols.
 
@@ -14,7 +14,7 @@ These profiles describe fundamental information when exchanging information as m
 - [MedCom Messaging](#medcom-messaging)
   * [Documentation](#documentation)
     + [Technical Specifications](#technical-specifications)
-  * [2 Release Notes](#2-release-notes)<br><br>
+  * [Release Notes](#release-notes)<br><br>
 
 ## Documentation 
 ### Technical Specifications
@@ -25,6 +25,6 @@ IGs might be difficult for people with little or no knowledge about FHIR and how
 
 
 
-## 2 Release Notes
+## Release Notes
 
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md)
