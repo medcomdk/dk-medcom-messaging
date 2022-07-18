@@ -1,3 +1,5 @@
+[Return](../../index.md)
+
 # Introduction to the Technical Content
 
 > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
