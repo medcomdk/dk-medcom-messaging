@@ -67,3 +67,5 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 <figcaption text-align="center"><b>Figure 1: Messaging model over exchanging a MedCom FHIR Message </b> </figcaption>
 </figure>
 
+## Release Note
+[Updates in the latest release.](assets/documents/ReleaseNotesTechnicalContent.md)
