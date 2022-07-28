@@ -1,4 +1,4 @@
-<a href="https://medcomdk.github.io/MedComLandingPage/" target="_blank">Return</a>
+<a href="https://medcomdk.github.io/MedComLandingPage/">Return</a>
 
 # MedCom Messaging 
 This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
@@ -21,7 +21,6 @@ The technical specifications for MedCom Messaging profiles are defined in an IG.
 
 IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the messaging IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system
 [Overview of the content of the messaging profiles.](assets/documents/Intro-Technical-Spec-ENG.md)
-
 
 
 ## 2 Release Notes
