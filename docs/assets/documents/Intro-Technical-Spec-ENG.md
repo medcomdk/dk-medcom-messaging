@@ -71,4 +71,4 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 </figure>
 
 ## 3 Release Note
-[Updates in the latest release.](assets/documents/ReleaseNotesTechnicalContent.md)
+[Updates in the latest release.](ReleaseNotesTechnicalContent.md)
