@@ -1,3 +1,4 @@
+[Return](../../index.md)
 # Release Note
 
 As described in [Versioning DOC], the Implementation Guide (IG) and the textual documentation will have different versions, why there are two release notes in the following.

@@ -1,4 +1,5 @@
-[Return](Intro-Technical-Spec-ENG.md)
+[Return](../../assets/documents/Intro-Technical-Spec-ENG.md)
+
 # Release Note
 The release notes in the following describes the changes made to MedCom Messaging. 
 Each subpage will have its own release note, and they can be found here in the table below:
