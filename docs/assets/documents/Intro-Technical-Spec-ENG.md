@@ -1,12 +1,16 @@
 [Return](../../index.md)
 
 # Introduction to the Technical Content
-
 > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
+ 
+**Tabel of Contents**
+* [1 Content Overview](#1-content-overview)
+* [2 General Messaging Model](#2-general-messaging-model) 
+* [3 Release Note](#3-release-note)
 
-## Content Overview
 
+# 1 Content Overview
 The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
 
 <style type="text/css">
@@ -25,7 +29,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
     <th class="tg-wqo7"><span style="font-weight:bold">Profile</span></th>
     <th class="tg-wqo7"><span style="font-weight:bold">Resource</span></th>
     <th class="tg-wqo7"><span style="font-weight:bold">Description</span></th>
-    <th class="tg-wqo7"><span style="font-weight:bold">MustSupport elements</span></th>
+    <th class="tg-wqo7"><span style="font-weight:bold">Must Support elements</span></th>
   </tr>
 </thead>
 <tbody>
@@ -57,8 +61,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 </table>
 
 
-## General Messaging Model
-
+## 2 General Messaging Model
 The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced. MedComMessagingMessageHeader references the sender, receiver, and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content of the message, like an Encounter in HospitalNotification or a Communication in CareCommunication, is referenced from the focus element in MedComMessagingMessageHeader
 
 
@@ -67,5 +70,5 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 <figcaption text-align="center"><b>Figure 1: Messaging model over exchanging a MedCom FHIR Message </b> </figcaption>
 </figure>
 
-## Release Note
+## 3 Release Note
 [Updates in the latest release.](assets/documents/ReleaseNotesTechnicalContent.md)
