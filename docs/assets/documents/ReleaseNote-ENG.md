@@ -33,7 +33,7 @@ In the table below updates of the <a href="../index.md" target="_blank">MedCom C
     <td class="tg-ne9s">1.0.0-a.1</td>
     <td class="tg-ne9s">31-05-2022</td>
     <td class="tg-ne9s">Inital release. Presentation of MedCom Messaging.</td>
-    <td class="tg-ne9s">View release note for: <a href="ReleaseNotesTechnicalContent">Introduction to the Technical Content</a></td>
+    <td class="tg-ne9s">View release note for: <a href="ReleaseNotesTechnicalContent.md">Introduction to the Technical Content</a></td>
   </tr>
   <tr>
     <td class="tg-ne9s"></td>
