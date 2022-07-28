@@ -26,7 +26,7 @@ Each subpage will have its own release note, and they can be found here in the t
     <td class="tg-ne9s">1.0.0-a.1</td>
     <td class="tg-ne9s">31-05-2022</td>
     <td class="tg-ne9s">Inital release. Presentation of MedCom Messaging.</td>
-    <td class="tg-ne9s">View release note for: <a href="ReleaseNotesTechnicalContent">Introduction to the Technical Content</a></td>
+    <td class="tg-ne9s">View release note for: <a href="ReleaseNote-Eng.md">MedCom Messaging</a></td>
   </tr>
   <tr>
     <td class="tg-ne9s"></td>
