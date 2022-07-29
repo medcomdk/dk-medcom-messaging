@@ -1,8 +1,13 @@
 [Return](../../assets/documents/Intro-Technical-Spec-ENG.md)
 
 # Release Note
-The release notes in the following describes the changes made to MedCom Messaging. 
+The release notes in the following describes the changes made to MedCom Messaging profile. 
 Each subpage will have its own release note, and they can be found here in the table below:
+  * [MedCom Messaging Profile](ReleaseNote-ENG.md)
+    * [Introduction to the Technical Content](ReleaseNotesTechnicalContent.md)
+    
+
+In the table below is an overview of the changes recently made and where to find more information.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;max-width:65%;}
@@ -27,7 +32,7 @@ Each subpage will have its own release note, and they can be found here in the t
     <td class="tg-ne9s">1.0.0-a.1</td>
     <td class="tg-ne9s">31-05-2022</td>
     <td class="tg-ne9s">Inital release. Presentation of MedCom Messaging.</td>
-    <td class="tg-ne9s">View release note for: <a href="ReleaseNote-ENG.md">MedCom Messaging</a></td>
+    <td class="tg-ne9s">View release note for: <a href="ReleaseNote-ENG.md">MedCom Messaging profile</a> <br> <a href="ReleaseNoteTechnicalContent.md">Introduction to the Technical Content</a></td>
   </tr>
   <tr>
     <td class="tg-ne9s"></td>

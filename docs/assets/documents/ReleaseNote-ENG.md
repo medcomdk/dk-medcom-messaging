@@ -1,15 +1,27 @@
 [Return](../../index.md)
 # Release Note
 
-As described in [Versioning DOC], the Implementation Guide (IG) and the textual documentation will have different versions, why there are two release notes in the following.
+<!-- As described in [Versioning DOC], the Implementation Guide (IG) and the textual documentation will have different versions, why there are two release notes in the following.
 
 ## Implementation Guide
 
-<a href="https://github.com/medcomdk/dk-medcom-core/releases" target="_blank">Tab here to see Release Note for MedCom Core Implementation Guide.</a>
+<a href="https://github.com/medcomdk/dk-medcom-messaging/releases" target="_blank">Tab here to see Release Note for MedCom Messaging Implementation Guide.</a>
 
-## MedCom Core Introduction Page
+## 
 
-In the table below updates of the <a href="../index.md" target="_blank">MedCom Core introduction</a> can be seen. 
+In the table below updates of the <a href="../index.md" target="_blank">MedCom Core introduction</a> can be seen.  -->
+
+
+The release notes in the following describes the changes made to MedCom Messaging profile .
+Each subpage will have its own release note, and they can be found here: 
+
+  * [MedCom Messaging](ReleaseNote-ENG.md)
+    * [Introduction to the Technical Content](ReleaseNotesTechnicalContent.md)
+    
+
+In the table below is an overview of the changes recently made and where to find more information.
+
+
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;max-width:65%;}
