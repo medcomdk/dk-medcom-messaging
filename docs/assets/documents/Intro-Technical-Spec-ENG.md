@@ -11,7 +11,7 @@
 <br>
 <br>
 
-# 1 Content Overview
+## 1 Content Overview
 The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
 
 <style type="text/css">
