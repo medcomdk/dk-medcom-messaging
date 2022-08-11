@@ -6,6 +6,7 @@
  
 **Tabel of Contents**
 * [1 Content Overview](#1-content-overview)
+  * [1.1 Narrative text](#11-narative-text)
 * [2 General Messaging Model](#2-general-messaging-model) 
 * [3 Release Note](#3-release-note)
 <br>
@@ -61,10 +62,13 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 </tbody>
 </table>
 
+### 1.1 Narative text 
+MedCom FHIR messages shall always contain a human-readable narrative text. The narrative text is a summary of the resource content and contains all resources with a ∑ flag.  An overview of the included resources in narrative text can be found in the standard IG.
+For the general MedCom FHIR messages the narrative text contains i.e. information about message type, message destination application(s), actual destination address or id, the primary receiver of the message, system information, extensions and more. To see alle included resources in the narrative text see <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a>
+
 
 ## 2 General Messaging Model
 The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced. MedComMessagingMessageHeader references the sender, receiver, and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content of the message, like an Encounter in HospitalNotification or a Communication in CareCommunication, is referenced from the focus element in MedComMessagingMessageHeader
-
 
 <figure>
 <img src="../images/MessagingModel.png" alt="General Messaging Model when exchanging a MedCom FHIR Message." style="width:50%" id="Fig1">
