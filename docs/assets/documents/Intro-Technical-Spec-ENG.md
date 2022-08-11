@@ -1,9 +1,7 @@
 [Return](../../index.md)
 
 # Introduction to the Technical Content
-> In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
- and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
- 
+
 **Tabel of Contents**
 * [1 Content Overview](#1-content-overview)
   * [1.1 Narrative text](#11-narative-text)
@@ -11,6 +9,10 @@
 * [3 Release Note](#3-release-note)
 <br>
 <br>
+
+  > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
+  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
+  <br>
 
 ## 1 Content Overview
 The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
@@ -61,6 +63,8 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
   </tr>
 </tbody>
 </table>
+
+<br>
 
 ### 1.1 Narative text 
 MedCom FHIR messages shall always contain a human-readable narrative text. The narrative text is a summary of the resource content and contains all resources with a ∑ flag.  An overview of the included resources in narrative text can be found in the standard IG.
