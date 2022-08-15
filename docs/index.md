@@ -8,7 +8,7 @@
 * [2 Release Notes](#2-release-notes)<br><br>
 <hr/>
 
-This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
+This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> 
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> 
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html"> MedComMessagingOrganization</a> 
