@@ -1,4 +1,5 @@
 [Return](../../index.md)
+<hr/>
 
 # Introduction to the Technical Content
 
@@ -6,9 +7,7 @@
 * [1 Content Overview](#1-content-overview)
   * [1.1 Narrative text](#11-narative-text)
 * [2 General Messaging Model](#2-general-messaging-model) 
-
-<br>
-<br>
+<hr/>
 
   > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
   and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.

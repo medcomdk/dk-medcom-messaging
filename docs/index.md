@@ -1,7 +1,8 @@
 <!-- <a href="https://medcomdk.github.io/MedComLandingPage/">Return</a> -->
+<hr/>
 
 # MedCom Messaging 
-<hr/>
+
 **Table of Content**
 * [1 Documentation](#1-documentation)
   + [1.1 Technical Specifications](#11-technical-specifications)
