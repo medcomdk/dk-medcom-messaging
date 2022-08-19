@@ -1,7 +1,8 @@
 [Return](../../index.md)
-<hr/>
+
 
 # Introduction to the Technical Content
+<hr/>
 
 **Tabel of Contents**
 * [1 Content Overview](#1-content-overview)
