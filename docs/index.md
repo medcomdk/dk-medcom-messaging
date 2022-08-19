@@ -5,7 +5,8 @@
 **Table of Content**
 * [1 Documentation](#1-documentation)
   + [1.1 Technical Specifications](#11-technical-specifications)
-* [2 Release Notes](#2-release-notes)<br><br>
+<!-- * [2 Release Notes](#2-release-notes) -->
+<br><br>
 <hr/>
 
 This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
@@ -24,5 +25,5 @@ IGs might be difficult for people with little or no knowledge about FHIR and how
 [Overview of the content of the messaging profiles.](assets/documents/Intro-Technical-Spec-ENG.md)
 
 
-## 2 Release Notes
-[Updates in the latest release.](assets/documents/ReleaseNote-ENG.md)
+<!-- ## 2 Release Notes
+[Updates in the latest release.](assets/documents/ReleaseNote-ENG.md) -->

@@ -6,7 +6,7 @@
 * [1 Content Overview](#1-content-overview)
   * [1.1 Narrative text](#11-narative-text)
 * [2 General Messaging Model](#2-general-messaging-model) 
-* [3 Release Note](#3-release-note)
+
 <br>
 <br>
 
@@ -79,5 +79,5 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 <figcaption text-align="center"><b>Figure 1: General Messaging Model for MedCom FHIR Message</b> </figcaption>
 </figure>
 
-## 3 Release Note
-[Updates in the latest release.](ReleaseNotesTechnicalContent.md)
+<!-- ## 3 Release Note
+[Updates in the latest release.](ReleaseNotesTechnicalContent.md) -->
