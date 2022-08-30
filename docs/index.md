@@ -25,6 +25,7 @@ IGs might be difficult for people with little or no knowledge about FHIR and how
 [Overview of the content of the messaging profiles.](assets/documents/Intro-Technical-Spec-ENG.md)
 
 This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
+
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> 
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> 
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html"> MedComMessagingOrganization</a> 
@@ -42,12 +43,12 @@ Below you see the basic MedCom FHIR Messaging Model.
 
 As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
-- A MedComMessagingMessage is a Bundle resource of type "message"
-- The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
-- The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
-  - a source organization called a MedComMessagingOrganization, which is an Organization resource
-  - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
-- The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+* A MedComMessagingMessage is a Bundle resource of type "message"
+* The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
+* The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
+  * a source organization called a MedComMessagingOrganization, which is an Organization resource
+  * a destination organization also a MedComMessagingOrganization, which too is an Organization resource
+* The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
 
 <br>
 
@@ -102,6 +103,7 @@ The element event **shall** be defined in accordance with the type of standard t
 | Links for MedComMessagingOrganization|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
+| [MedComMessagingOrganization](/assets/documents/MedComMessagingOrganization.md) |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 <br>
