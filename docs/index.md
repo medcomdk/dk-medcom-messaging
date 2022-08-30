@@ -6,6 +6,10 @@
 **Table of Content**
 * [1 Documentation](#1-documentation)
   + [1.1 Technical Specifications](#11-technical-specifications)
+  + [1.2 MedComMessagingMessage](#12-medcommessagingmessage-bundle)
+  + [1.3 MedComMessagingHeader](#13-medcommessagingmessageheader)
+  + [1.4 MedComMessaging](#14-medcommessagingorganization)
+  + [1.5 MedComMessagingProvenance](#15-medcommessagingprovenance)
 <!-- * [2 Release Notes](#2-release-notes) -->
 <hr/>
 
@@ -28,6 +32,25 @@ IGs might be difficult for people with little or no knowledge about FHIR and how
 
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
+<br>
+
+Below you see the basic MedCom FHIR Messaging Model.
+
+As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
+
+- A MedComMessagingMessage is a Bundle resource of type "message"
+- The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
+- The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
+  - a source organization called a MedComMessagingOrganization, which is an Organization resource
+  - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
+- The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+
+<br>
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
+</figure>
 <br>
 
 | Links for MedComMessingMessage|
