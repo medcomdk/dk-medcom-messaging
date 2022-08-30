@@ -83,7 +83,7 @@ One common operation performed with resources is to gather a collection of resou
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-| [MedComMessageHeader](/assets/documents/MessageHeader.md) |
+| [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -123,7 +123,7 @@ Provenance of a resource is a record that describes entities and processes invol
 | Links for MedComMessagingProvenance|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
-| [MedComs use of Provenance](/assets/documents/Provenance.md) |
+| [MedComs use of Provenance](/assets/documents/MedComMessagingProvenance.md) |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
