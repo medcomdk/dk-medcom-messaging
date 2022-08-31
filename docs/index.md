@@ -19,7 +19,7 @@
 
 ### 1.1 Technical Specifications
 
-### 1.1 What is a MedCom FHIR Message Standard
+### 1.1.2 What is a MedCom FHIR Message Standard
 
 A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
 
