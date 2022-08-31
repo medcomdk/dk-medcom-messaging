@@ -5,12 +5,12 @@
 
 ## Table of Content
 
-* [1. Documentation](#1-documentation)
-  * [1. Technical Specifications](#11-technical-specifications)
-  * [1. MedComMessagingMessage](#12-medcommessagingmessage-bundle)
-  * [1. MedComMessagingHeader](#13-medcommessagingmessageheader)
-  * [1. MedComMessaging](#14-medcommessagingorganization)
-  * [1. MedComMessagingProvenance](#15-medcommessagingprovenance)
+1. [Documentation](#1-documentation)
+  1.1. [Technical Specifications](#11-technical-specifications)
+  1.1. [MedComMessagingMessage](#12-medcommessagingmessage-bundle)
+  1.1. [MedComMessagingHeader](#13-medcommessagingmessageheader)
+  1.1. [MedComMessaging](#14-medcommessagingorganization)
+  1.1. [MedComMessagingProvenance](#15-medcommessagingprovenance)
 <!-- * [2 Release Notes](#2-release-notes) -->
 
 <hr/>
@@ -24,13 +24,13 @@
 A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
 
 1. Clinical Documentation
-  1.1 Clinical description
-  1.1 Use Cases
+   1.1. Clinical description
+   1.1. Use Cases
 1. Technical Documentation
-  1.1 One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards were specific rules regarding syntax and qualifiers.
+   1.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards were specific rules regarding syntax and qualifiers.
 1. Additional Documentation
-  1.1 A GitHub Page linking it all together with further descriptions and specifications
-  1.1 This Governance
+   1.1. A GitHub Page linking it all together with further descriptions and specifications
+   1.1. This Governance
 
 The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the MedCom Messaging profiles not alone compose a standard but are used to describe central information in MedComs messaging standards. <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Here you can find the MedCom Messaging IG.</a> 
 
