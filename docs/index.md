@@ -194,6 +194,48 @@ Note that an element that has the property IsModifier is not necessarily a "key"
 
 In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
 
-
 <!-- ## 2 Release Notes
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md) -->
+
+### 5.6 Narrative Texts
+
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative **SHALL** encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
+
+Narratives contains two sub elements, status and div.
+
+#### 5.6.1 The status element
+
+[TBD]
+The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
+
+In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+
+A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty.
+
+#### 5.6.2 The div element
+
+The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
+
+The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
+
+The div element **SHALL** have some non-whitespace content (text or an image).
+
+#### 5.6.3 Scope and Usage
+
+[TBD]
+The narrative element is a human-readable summary of the resource (essential clinical and business information)
+
+#### 5.6.4 General Narrative Text Rules
+
+* All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
+* The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
+* The narrative **SHALL** reflect the impact of all modifier extensions.
+
+#### 5.6.5 Links for Narrative Text
+
+| Links for Narrative Text|
+|:---|
+|[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
+|[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
+|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
