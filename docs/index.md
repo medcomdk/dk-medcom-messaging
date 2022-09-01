@@ -72,6 +72,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
+
 <br>
 
 | Links for MedComMessingMessage|
@@ -85,9 +86,31 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
+### 1.2.2 MedComMessingMessage Identifiers
+
+A MedComMessingMessage contains two identifiers:
+
+* the Bundle.id and
+* the MessageHeader.id.
+
+Each time a new MedComMessingMessage is created, it **SHALL** be assigned an identifier (MessageHeader.id) that is unique. This **SHALL** be achieved by using a UUID. Each time a message is sent, the Bundle.id **SHALL** be changed to a new value.
+
+When a receiver receives and processes the MedComMessingMessage, it **SHALL** respond with a new MedComMessingMessage with a new identifier, wrapped in a bundle which also has a new id. The response message **SHALL** also quote the request MessageHeader.id in MessageHeader.response.identifier so that the source system can relate the response to its request.
+
+### 1.2.3 MedComMessingMessage Timestamps
+
+A MedComMessingMessage has 2 important timestamps:
+
+* Bundle.timestamp: the time the message was sent
+* Bundle.meta.lastUpdated: the last time the message was updated (either by storing, or by modification)
+
+In addition, the message **MAY** have additional timestamps in additional resources in the MedComMessingMessage, either .meta.lastUpdated or others throughout the resources. The meaning of these will depend on the MedComMessingMessage event.
+
 ## 1.3 MedComMessagingMessageHeader
 
 [TBD]
+
+<br>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
@@ -156,6 +179,21 @@ Provenance resources are a record-keeping assertion that gathers information abo
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
+
+### 5.5 MustSupport
+
+Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
+
+For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
+
+Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
+
+<br>
+
+#### 5.5.1 Scope and Usage
+
+In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
+
 
 <!-- ## 2 Release Notes
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md) -->
