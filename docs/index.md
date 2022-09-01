@@ -10,7 +10,7 @@
   * [1.1. Technical Specifications](#11-technical-specifications)
   * [1.2. MedComMessagingMessage](#12-medcommessagingmessage-bundle)
   * [1.3. MedComMessagingHeader](#13-medcommessagingmessageheader)
-  * [1.4. MedComMessaging](#14-medcommessagingorganization)
+  * [1.4. MedComMessagingOrganization](#14-medcommessagingorganization)
   * [1.5. MedComMessagingProvenance](#15-medcommessagingprovenance)
 <!-- * [2 Release Notes](#2-release-notes) -->
 
