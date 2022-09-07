@@ -42,7 +42,7 @@ Use cases describe the different scenarios a standard support. For a certain rea
   
   > Be aware that new version of uses cases will come soon!
 
-### Technical Specification
+### 1.2 Technical Specification
 The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the  MedCom's FHIR Messaging profiles not alone compose a standard but are used to describe central information in MedComs standards. Click her to find <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging IG</a>.
 
 IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the core IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system.
