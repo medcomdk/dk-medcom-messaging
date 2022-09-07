@@ -19,7 +19,7 @@
  
  > Note: Clinical guidelines and use cases are in both Danish and English. The remaining documentation will be in English.
 
-This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The MedCom Messaging Implementation Guide (IG) includes the following profiles:
+This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging Implementation Guide (IG) </a>includes the following profiles:
 
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a>
 * <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a>
@@ -28,31 +28,13 @@ This page represents the messaging profiles (DK: Meddelelsesprofiler) used in Me
 
 <br><br>
 
-These profiles describe fundamental information when exchanging information as messages. Therefore one or more profiles are included in all MedComs FHIR messages. The messaging profiles do not alone constitute a standard, but one or more profiles can be used in a standard. Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
-
-
-
-
-
-This page presents a MedCom FHIR Message Standard. The standard is the term for a collection of documentation covering most aspects of the standard.
-
-* Clinical Documentation
-  * Clinical description
-  * Use Cases
-* Technical Documentation
-  * One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards were specific rules regarding syntax and qualifiers.
-* Additional Documentation
-  * A GitHub Page linking it all together with further descriptions and specifications
-  * This Governance
-
+These profiles describe fundamental information when exchanging information as messages. Therefore one or more profiles are included in all MedCom's FHIR messages. The messaging profiles do not alone constitute a standard, but one or more profiles can be used in a standard. Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
 
 
 ## 1 Standard Documentation
 
 ### 1.1 Uses Cases 
-Use cases describe the different scenarios a standard support. For a certain real-world scenario, it describes the requirements for the content of a message. The purpose of the use cases is to ensure a coherent implementation and use of the HospitalNotification. The descriptions are targeted IT-system vendors and the people responsible for the implementation in regions and municipalities.
-
-The use cases for HospitalNotification are qualified in collaboration with EPR- and vendors catering to the municipalities.
+Use cases describe the different scenarios a standard support. For a certain real-world scenario, it describes the requirements for the content of a message. The purpose of the use cases is to ensure a coherent implementation and use of the MedCom's FHIR Messaging profiles. The descriptions are targeted IT-system vendors and the people responsible for the implementation in regions and municipalities.
 
 <b>The use cases are currently in preparation, as soon as they are ready they will be presented below in Danish and English:</b> 
 
@@ -60,7 +42,13 @@ The use cases for HospitalNotification are qualified in collaboration with EPR- 
   
   > Be aware that new version of uses cases will come soon!
 
-### 1.1.2 What is a MedCom FHIR Message Standard
+### Technical Specification
+The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the  MedCom's FHIR Messaging profiles not alone compose a standard but are used to describe central information in MedComs standards. Click her to find <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging IG</a>.
+
+IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the core IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system.
+[Click here to read overview of the content of the standard.](assets/documents/Intro-Technical-Spec-ENG.md)
+
+<!-- #### 1.1.2 What is a MedCom FHIR Message Standard
 
 A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
 
@@ -101,12 +89,6 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 <br>
 
-| Links for MedComMessingMessage|
-|:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
-| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
-
-<br>
 
 ## 1.2.1 Scope and Usage
 
@@ -223,7 +205,7 @@ In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR
 <!-- ## 2 Release Notes
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md) -->
 
-### 5.6 Narrative Texts
+<!-- ### 5.6 Narrative Texts
 
 A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative **SHALL** encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
@@ -264,4 +246,4 @@ The narrative element is a human-readable summary of the resource (essential cli
 |:---|
 |[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
 |[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
-|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
+|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)| --> -->
