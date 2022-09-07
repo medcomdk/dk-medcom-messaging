@@ -165,13 +165,14 @@ Provenance resources are a record-keeping assertion that gathers information abo
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
-
-| Links for MedComMessagingProvenance|
-|:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
-| [MedComs use of Provenance](/assets/documents/MedComMessagingProvenance.md) |
-| <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 <br>
+
+| Links for MedComMessagingOrganization|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
+| [MedComMessagingOrganization](/assets/documents/MedComMessagingOrganization.md) |
+| <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
+  <br>
 
 
 ### 2.5 MustSupport
