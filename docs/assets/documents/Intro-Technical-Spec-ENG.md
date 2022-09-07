@@ -15,7 +15,7 @@
   * [2.3 MedComMessagingOrganization](#23-medcommessagingorganization)
   * [2.4 MedComMessagingProvenance](#24-medcommessagingprovenance)
   * [2.5 MustSupport](#25-mustsupport)
-  * [2.6](#26-narrative-texts)
+  * [2.6 Narrative text](#26-narrative-texts)
     * [2.6.1 The status element](#261-the-status-element)
     * [2.6.2 The div element](#262-the-div-element)
 <hr/>
@@ -104,16 +104,13 @@ One common operation performed with resources is to gather a collection of resou
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
-<br>
-
-
-
 #### 2.1.1 MedComMessingMessage Identifiers
 
 A MedComMessingMessage contains two identifiers:
 
 * the Bundle.id and
 * the MessageHeader.id.
+<br><br>
 
 Each time a new MedComMessingMessage is created, it **SHALL** be assigned an identifier (MessageHeader.id) that is unique. This **SHALL** be achieved by using a UUID. Each time a message is sent, the Bundle.id **SHALL** be changed to a new value.
 
@@ -124,7 +121,7 @@ A MedComMessingMessage has 2 important timestamps:
 
 * Bundle.timestamp: the time the message was sent
 * Bundle.meta.lastUpdated: the last time the message was updated (either by storing, or by modification)
-
+<br><br>
 In addition, the message **MAY** have additional timestamps in additional resources in the MedComMessingMessage, either .meta.lastUpdated or others throughout the resources. The meaning of these will depend on the MedComMessingMessage event.
 
 ### 2.2 MedComMessagingMessageHeader
@@ -144,9 +141,6 @@ The element event **shall** be defined in accordance with the type of standard t
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
 | [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
-
-<br>
-
 
 
 ### 2.3 MedComMessagingOrganization
@@ -203,8 +197,6 @@ Contained resources do not have narrative, but their content **SHALL** be repres
 Narratives contains two sub elements, status and div.
 
 #### 2.6.1 The status element
-
-[TBD]
 The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
 
 In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
