@@ -239,4 +239,4 @@ The narrative element is a human-readable summary of the resource (essential cli
 |:---|
 |[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
 |[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
-|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)| --> -->
+|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)| --> 
