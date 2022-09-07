@@ -72,12 +72,22 @@ For the general MedCom FHIR messages the narrative text contains i.e. informatio
 
 
 ## 2 General Messaging Model
-The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. From the entry element in profile MedComMessagingMessage all included profiles shall be referenced. MedComMessagingMessageHeader references the sender, receiver, and carbon-copy organizations, which all shall be a MedComMessagingOrganization. Additional content of the message, like an Encounter in HospitalNotification or a Communication in CareCommunication, is referenced from the focus element in MedComMessagingMessageHeader
+The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. 
 
-<figure>
-<img src="../images/MessagingModel.png" alt="General Messaging Model when exchanging a MedCom FHIR Message." style="width:50%" id="Fig1">
-<figcaption text-align="center"><b>Figure 1: General Messaging Model for MedCom FHIR Message</b> </figcaption>
+As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
+
+* A MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources:
+  * The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
+  * The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
+    * a source organization called a MedComMessagingOrganization, which is an Organization resource
+    * a destination organization also a MedComMessagingOrganization, which too is an Organization resource
+  * The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig1" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
+
 
 <!-- ## 3 Release Note
 [Updates in the latest release.](ReleaseNotesTechnicalContent.md) -->
