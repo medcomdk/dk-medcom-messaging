@@ -5,16 +5,9 @@
 <hr/>
 
 **Table of Contents**
-
 * [1 Standard Documentation](#1-standard-documentation)
   * [1.1 Use Cases](#11-uses-cases)
   * [1.2 Technical Specifications](#11-technical-specifications)
-
-  * [1.2. MedComMessagingMessage](#12-medcommessagingmessage-bundle)
-  * [1.3. MedComMessagingHeader](#13-medcommessagingmessageheader)
-  * [1.4. MedComMessagingOrganization](#14-medcommessagingorganization)
-  * [1.5. MedComMessagingProvenance](#15-medcommessagingprovenance)
-<!-- * [2 Release Notes](#2-release-notes) -->
 <hr/>
  
  > Note: Clinical guidelines and use cases are in both Danish and English. The remaining documentation will be in English.
