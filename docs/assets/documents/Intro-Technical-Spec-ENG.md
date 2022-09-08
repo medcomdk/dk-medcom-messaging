@@ -4,7 +4,7 @@
 # Introduction to the Technical Content
 <hr/>
 
-**Tabel of Contents**
+**Tabel of contents**
 * [1 Content Overview](#1-content-overview)
   * [1.1 Narrative text](#11-narative-text)
 * [2 General Messaging Model](#2-general-messaging-model) 
@@ -24,7 +24,7 @@
   and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
   <br>
 
-## 1 Content Overview
+## 1 Content overview
 The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
 
 <style type="text/css">
@@ -84,20 +84,20 @@ As shown below in the diagram  there are four MedCom profiled FHIR resources inv
 1. A MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources:
 2. The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
 3. The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
-  * a source organization called a MedComMessagingOrganization, which is an Organization resource
-  * a destination organization also a MedComMessagingOrganization, which too is an Organization resource
-4. The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+  * a source organisation called a MedComMessagingOrganization, which is an Organization resource
+  * a destination organisation called a MedComMessagingOrganization, which too is an Organization resource
+4. The MedComMessagingMessage's MedComMessagingProvenance, which is a Provenance resource
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig1" style="align-left"></a>
-<figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
+<figcaption text-align="left"><b>Figure 1: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 
-Below you will finde a thorough explanation of the resources in MedCom FHIR message profile. 
+Below you will finde a thorough explanation of the resources in MedCom's FHIR message profiles. 
 
 ### 2.1 MedComMessagingMessage (Bundle)
 
-One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
+One common operation performed with resources is to gather a collection of resources into a single instance containing context. In a FHIR context this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
 | Links for MedComMessingMessage|
 |:---|
@@ -125,13 +125,13 @@ A MedComMessingMessage has 2 important timestamps:
 In addition, the message **MAY** have additional timestamps in additional resources in the MedComMessingMessage, either .meta.lastUpdated or others throughout the resources. The meaning of these will depend on the MedComMessingMessage event.
 
 ### 2.2 MedComMessagingMessageHeader
-The MedComMessageHeader profile is a resource that **shall** be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader **shall** include a sender and receiver and it **may** include a carbon-copy receiver, however this is depended on type of standard. Each MedComMessagingMessageHeader **shall** include a globally unique id, which **shall** be used to reference the message in the message history from the MedComMessagingProvenance profile.
+The MedComMessageHeader profile is a resource that shall be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader shall include a sender and receiver and it may include a carbon-copy receiver, however, this depends on the type of standard. Each MedComMessagingMessageHeader shall include a globally unique id, which shall be used to reference the message in the message history from the MedComMessagingProvenance profile.
 
-The element event **shall** be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it **shall** be expected that the MedComMessagingMessageHeader is inherited in each standard.
+The element event shall be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it shall be expected that the MedComMessagingMessageHeader is inherited in each standard.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
-<figcaption text-align="left"><b>Figure 3: MedComMessageHeader</b></figcaption>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig2" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 2: MedComMessageHeader</b></figcaption>
 </figure>
 
 <br>
@@ -144,7 +144,7 @@ The element event **shall** be defined in accordance with the type of standard t
 
 
 ### 2.3 MedComMessagingOrganization
-This profile describes the Organization resource that **shall** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **shall** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **shall** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
+This profile describes the Organization resource that shall be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it shall include both a SOR and EAN/GLN identifier. MedComMessagingOrganization shall be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
 
 | Links for MedComMessagingOrganization|
 |:---|
@@ -154,9 +154,9 @@ This profile describes the Organization resource that **shall** be used in all M
 
 
 ### 2.4 MedComMessagingProvenance
-The MedComMessagingProvenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
+The MedComMessagingProvenance resource tracks information about the activity that created, revised, deleted or signed a version of a resource, and describes the entities and agents involved. This information can be used to form assessments about its quality, reliability,and trustworthiness or provide pointers for where to go to further investigate the origins of the resource and the information in it.
 
-Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
+The provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the creation/update etc. of the resource. An AuditEvent resource contains overlapping information but is created as events occur to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
 
 <!-- Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies. -->
 <br>

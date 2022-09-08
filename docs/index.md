@@ -4,13 +4,12 @@
 
 <hr/>
 
-**Table of Contents**
+**Table of contents**
 * [1 Standard Documentation](#1-standard-documentation)
   * [1.1 Use Cases](#11-uses-cases)
   * [1.2 Technical Specifications](#11-technical-specifications)
 <hr/>
  
- > Note: Clinical guidelines and use cases are in both Danish and English. The remaining documentation will be in English.
 
 This page represents the messaging profiles (DK: Meddelelsesprofiler) used in MedComs FHIR®© standards.The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging Implementation Guide (IG) </a>includes the following profiles:
 
@@ -24,9 +23,9 @@ This page represents the messaging profiles (DK: Meddelelsesprofiler) used in Me
 These profiles describe fundamental information when exchanging information as messages. Therefore one or more profiles are included in all MedCom's FHIR messages. The messaging profiles do not alone constitute a standard, but one or more profiles can be used in a standard. Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
 
 
-## 1 Standard Documentation
+## 1 Standard documentation
 
-### 1.1 Uses Cases 
+### 1.1 Uses cases 
 Use cases describe the different scenarios a standard support. For a certain real-world scenario, it describes the requirements for the content of a message. The purpose of the use cases is to ensure a coherent implementation and use of the MedCom's FHIR Messaging profiles. The descriptions are targeted IT-system vendors and the people responsible for the implementation in regions and municipalities.
 
 <b>The use cases are currently in preparation, as soon as they are ready they will be presented below in Danish and English:</b> 
@@ -35,7 +34,7 @@ Use cases describe the different scenarios a standard support. For a certain rea
   
   > Be aware that new version of uses cases will come soon!
 
-### 1.2 Technical Specification
+### 1.2 Technical specification
 The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the  MedCom's FHIR Messaging profiles not alone compose a standard but are used to describe central information in MedComs standards. Click her to find <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging IG</a>.
 
 IGs might be difficult for people with little or no knowledge about FHIR and how to understand an IG. Therefor has MedCom developed a webpage describing the content of the core IG. The link below gives an overview of which profiles are included, what their purpose are, and which elements that shall be supported in a system.
