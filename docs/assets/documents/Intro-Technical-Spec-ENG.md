@@ -93,11 +93,11 @@ As shown below in the diagram  there are four MedCom profiled FHIR resources inv
 <figcaption text-align="left"><b>Figure 1: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 
-Below you will finde a thorough explanation of the resources in MedCom's FHIR message profiles. 
+Below you will finde a thorough explanation of the MedCom profiled FHIR resources involved in a MedCom FHIR Message. 
+
 
 ### 2.1 MedComMessagingMessage (Bundle)
-
-One common operation performed with resources is to gather a collection of resources into a single instance containing context. In a FHIR context this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange (see Messaging)
+The MedComMessagingMessage is a base resouruce in all meassages. This resource is of thype Bundle. This means that the MedComMessagingMessage collects resources together into a single instance containing context. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange. 
 
 | Links for MedComMessingMessage|
 |:---|
