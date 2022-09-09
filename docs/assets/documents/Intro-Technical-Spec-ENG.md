@@ -161,11 +161,11 @@ The provenance resources are a record-keeping assertion that gathers information
 <!-- Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies. -->
 <br>
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" alt="MedComMessageHeader"  style="width:100%" id="Fig3" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 3: MedComMessagingProvenance</b></figcaption>
 </figure>
-<
-<br>
+
+
 
 | Links for MedComMessagingOrganization|
 |:---|
@@ -177,33 +177,32 @@ The provenance resources are a record-keeping assertion that gathers information
 
 
 ### 2.5 MustSupport
+The mustSupport is a boolean property, which meas that it can either be True or False. If the property is true, it means that systems claiming to conform to a given profile must "support" the element
+Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
-Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
+For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it must also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
 
-For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
-
-Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
+<!-- Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements. -->
 
 <br>
 
-In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
+In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG.
 
 <!-- ## 2 Release Notes
 [Updates in the latest release.](assets/documents/ReleaseNote-ENG.md) -->
 
 ### 2.6 Narrative Texts
 
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative **SHALL** encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
-Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
-
-Narratives contains two sub elements, status and div.
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative encodes all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+Contained resources do not have narrative, but their content must be represented in the ressource container.
+Narratives contains two sub elements, status and div tat are explained below.
 
 #### 2.6.1 The status element
 The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
 
-In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+In MedCom FHIR Messages The code system musts be: "additional" meaning that t it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
 
-A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty.
+A narrative in MedCom FHIR Messages can not be of code: empty.
 
 #### 2.6.2 The div element
 
@@ -215,7 +214,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 #### 2.6.3 General Narrative Text Rules
 
-* All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
+* All resources in a MedComMessingMessage contains a Narrative Text defined by the [resource].Text element
 * The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
 * The narrative **SHALL** reflect the impact of all modifier extensions.
 
