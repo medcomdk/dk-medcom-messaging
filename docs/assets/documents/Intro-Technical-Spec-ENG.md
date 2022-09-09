@@ -6,7 +6,6 @@
 
 **Tabel of contents**
 * [1 Content Overview](#1-content-overview)
-  * [1.1 Narrative text](#11-narative-text)
 * [2 General Messaging Model](#2-general-messaging-model) 
   * [2.1  MedComMessagingMessage (Bundle)](#21-medcommessagingmessage-bundle)
     * [2.1.1 MedComMessingMessage Identifiers](#211-medcommessingmessage-identifiers)
