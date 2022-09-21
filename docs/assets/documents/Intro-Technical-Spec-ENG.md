@@ -20,7 +20,7 @@
 <hr/>
 
   > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
-  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepandies.
+  and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepancies.
   <br>
 
 ## 1 Content overview
@@ -68,7 +68,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
     <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
     <td class="tg-tysj">Provenance</td>
     <td class="tg-tysj">Information about the activity of the current message and which organization has triggered the message. Further it describes the history of message activities.</td>
-    <td class="tg-tysj">Targets the MessageHeader<br>Timestamps<br>Activity of the message<br>Sender organization<br>If the message is a response to a previuos message</td>
+    <td class="tg-tysj">Targets the MessageHeader<br>Timestamps<br>Activity of the message<br>Sender organization<br>If the message is a response to a previous message</td>
   </tr>
 </tbody>
 </table>
@@ -81,8 +81,8 @@ The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the gen
 As shown below in the diagram  there are four MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
 1. A MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources:
-2. The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
-3. The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
+2. The MedComMessagingMessage's first resource is a MedComMessagingMessageHeader, which is a MessageHeader resource
+3. The MedComMessagingMessageHeader points to at least two organizations for the MedComMessagingMessage:
   * a source organisation called a MedComMessagingOrganization, which is an Organization resource
   * a destination organisation called a MedComMessagingOrganization, which too is an Organization resource
 4. The MedComMessagingMessage's MedComMessagingProvenance, which is a Provenance resource
@@ -96,7 +96,7 @@ Below you will finde a thorough explanation of the MedCom profiled FHIR resource
 
 
 ### 2.1 MedComMessagingMessage (Bundle)
-The MedComMessagingMessage is a base resouruce in all meassages. This resource is of thype Bundle. This means that the MedComMessagingMessage collects resources together into a single instance containing context. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange. 
+The MedComMessagingMessage is a base resouruce in all messages. This resource is of type Bundle. This means that the MedComMessagingMessage collects resources together into a single instance containing context. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange. 
 
 | Links for MedComMessingMessage|
 |:---|
@@ -110,7 +110,7 @@ A MedComMessingMessage contains two identifiers:
 * the Bundle.id and
 * the MessageHeader.id.
 <br><br>
-The MessageHeader.id identifier is uniqe identifier that is assigned to a new created massage.  Each time a  new message is sent, the Bundle.id will be changed to a new value.
+The MessageHeader.id identifier is uniqe identifier that is assigned to a new created message.  Each time a  new message is sent, the Bundle.id will be changed to a new value.
 When a receiver receives and processes the MedComMessingMessage, it will respond with a new MedComMessingMessage, and therfore with a new identifier, wrapped in a bundle which also has a new id. The response message will also quote the request MessageHeader.id in MessageHeader.response.identifier so that the source system can relate the response to its request.
 
 #### 2.1.2 MedComMessingMessage Timestamps
@@ -122,7 +122,7 @@ A MedComMessingMessage has 2 important timestamps:
 <br><br>
 
 ### 2.2 MedComMessagingMessageHeader
-The MedComMessageHeader profile that is used in all MedCom FHIR Messages. The message header contains information about wheather the message is requesting or reponding to an action. Therefore a MedComMessagingMessageHeader includes a sender, receiver and it may include a carbon-copy receiver, however, this depends on the type of standard. Each MedComMessagingMessageHeader includes a globally unique id, which is used to refere the message in the message history from the MedComMessagingProvenance profile.
+The MedComMessageHeader profile that is used in all MedCom FHIR Messages. The message header contains information about wheather the message is requesting or responding to an action. Therefore a MedComMessagingMessageHeader includes a sender, receiver and it may include a carbon-copy receiver, however, this depends on the type of standard. Each MedComMessagingMessageHeader includes a globally unique id, which is used to refere the message in the message history from the MedComMessagingProvenance profile.
 
 <!-- The element event shall be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it shall be expected that the MedComMessagingMessageHeader is inherited in each standard. -->
 
