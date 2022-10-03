@@ -1,15 +1,15 @@
 [Return](../../index.md)
 
 
-# Introduction to the Technical Content
+# Introduction to the Technical specification
 <hr/>
 
 **Tabel of contents**
 * [1 Content Overview](#1-content-overview)
 * [2 General Messaging Model](#2-general-messaging-model) 
   * [2.1  MedComMessagingMessage (Bundle)](#21-medcommessagingmessage-bundle)
-    * [2.1.1 MedComMessingMessage Identifiers](#211-medcommessingmessage-identifiers)
-    * [2.1.2 MedComMessingMessage Timestamps](#212-medcommessingmessage-timestamps)
+    * [2.1.1 MedComMessagingMessage Identifiers](#211-MedComMessagingMessage-identifiers)
+    * [2.1.2 MedComMessagingMessage Timestamps](#212-MedComMessagingMessage-timestamps)
   * [2.2 MedComMessagingMessageHeader](#22-medcommessagingmessageheader)
   * [2.3 MedComMessagingOrganization](#23-medcommessagingorganization)
   * [2.4 MedComMessagingProvenance](#24-medcommessagingprovenance)
@@ -24,7 +24,7 @@
   <br>
 
 ## 1 Content overview
-The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen below. 
+The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen in <a href="#Tab1">Table 1 </a>. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;width:85%}
@@ -35,14 +35,14 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 .tg .tg-tysj{color:#333333;text-align:left;vertical-align:top}
 .tg .tg-wqo7{color:#2c415c;text-align:left;vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg" id="Tab1">
 <caption style="color:#2c415c; font-weight:bold;text-align:center"> Tabel 1: Overview of MedCom Messaging Profiles  </caption>
 <thead>
   <tr>
     <th class="tg-wqo7"><span style="font-weight:bold">Profile</span></th>
     <th class="tg-wqo7"><span style="font-weight:bold">Resource</span></th>
     <th class="tg-wqo7"><span style="font-weight:bold">Description</span></th>
-    <th class="tg-wqo7"><span style="font-weight:bold">Must Support elements</span></th>
+    <th class="tg-wqo7"><span style="font-weight:bold">MustSupport elements</span></th>
   </tr>
 </thead>
 <tbody>
@@ -76,7 +76,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 <br>
 
 ## 2 General messaging model
-The <a href="#Fig1" rel="noopener noreferrer"> figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. 
+The <a href="#Fig1" rel="noopener noreferrer"> Figure 1 </a> illustrates the general messaging model, which all MedCom FHIR messages will comply to. 
 
 As shown below in the diagram  there are four MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
@@ -85,37 +85,37 @@ As shown below in the diagram  there are four MedCom profiled FHIR resources inv
 3. The MedComMessagingMessageHeader points to at least two organizations for the MedComMessagingMessage:
   * a source organisation called a MedComMessagingOrganization, which is an Organization resource
   * a destination organisation called a MedComMessagingOrganization, which too is an Organization resource
-4. The MedComMessagingMessage's MedComMessagingProvenance, which is a Provenance resource
+4. The MedComMessagingMessage points to MedComMessagingProvenance, which is a Provenance resource
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 1: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 
-Below you will finde a thorough explanation of the MedCom profiled FHIR resources involved in a MedCom FHIR Message. 
+Below you will find a thorough explanation of the MedCom profiled FHIR resources involved in a MedCom FHIR Message. 
 
 
 ### 2.1 MedComMessagingMessage (Bundle)
 The MedComMessagingMessage is a base resouruce in all messages. This resource is of type Bundle. This means that the MedComMessagingMessage collects resources together into a single instance containing context. These resource bundles are useful for a variety of reasons, including sending a set of resources as part of a message exchange. 
 
-| Links for MedComMessingMessage|
+| Links for MedComMessagingMessage|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessagingMessage in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
-#### 2.1.1 MedComMessingMessage Identifiers
+#### 2.1.1 MedComMessagingMessage Identifiers
 The identifiers are often used in FHIR to connect content in resources to external content fx when creating, sending and receiving a message.
-A MedComMessingMessage contains two identifiers:
+A MedComMessagingMessage contains two identifiers:
 
 * the Bundle.id and
-* the MessageHeader.id.
+* the MessageHeader.id
 <br><br>
 The MessageHeader.id identifier is uniqe identifier that is assigned to a new created message.  Each time a  new message is sent, the Bundle.id will be changed to a new value.
-When a receiver receives and processes the MedComMessingMessage, it will respond with a new MedComMessingMessage, and therfore with a new identifier, wrapped in a bundle which also has a new id. The response message will also quote the request MessageHeader.id in MessageHeader.response.identifier so that the source system can relate the response to its request.
+When a receiver receives and processes the MedComMessagingMessage, it will respond with a new MedComMessagingMessage, and therfore with a new identifier, wrapped in a bundle which also has a new id. The response message will also quote the request MessageHeader.id in MessageHeader.response.identifier so that the source system can relate the response to its request.
 
-#### 2.1.2 MedComMessingMessage Timestamps
+#### 2.1.2 MedComMessagingMessage Timestamps
 The Timestamps in FHIR represents the date/time that the bundle was assembled. 
-A MedComMessingMessage has 2 important timestamps:
+A MedComMessagingMessage has 2 important timestamps:
 
 * Bundle.timestamp: the time the message was sent
 * Bundle.meta.lastUpdated: the last time the message was updated (either by storing, or by modification)
@@ -135,8 +135,7 @@ The MedComMessageHeader profile that is used in all MedCom FHIR Messages. The me
 
 | Links for MedComMessagingMessageHeader|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-| [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 
@@ -145,8 +144,7 @@ This profile describes the Organization resource that is used in all MedCom FHIR
 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
-| [MedComMessagingOrganization](/assets/documents/MedComMessagingOrganization.md) |
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 
@@ -165,19 +163,17 @@ The provenance resources are a record-keeping assertion that gathers information
 </figure>
 
 
-
+<!-- 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
-| [MedComMessagingOrganization](/assets/documents/MedComMessagingOrganization.md) |
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
-<br>
+<br> -->
 
 
 ### 2.5 MustSupport
-The mustSupport is a boolean property, which meas that it can either be True or False. If the property is true, it means that systems claiming to conform to a given profile must "support" the element
-Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
+The mustSupport is a boolean property, which meas that it can either be True or False. If the property is true, it means that systems claiming to conform to a given profile must "support" the element because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
 For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it must also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
 
@@ -192,9 +188,9 @@ In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR
 
 ### 2.6 Narrative Texts
 
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative encodes all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative encodes all the structured data pointed out by the ∑-symbol and it is required to contain sufficient details to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content must be represented in the ressource container.
-Narratives contains two sub elements, status and div tat are explained below.
+Narratives contains two sub elements, status and div that are explained below.
 
 #### 2.6.1 The status element
 The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
@@ -213,7 +209,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 #### 2.6.3 General Narrative Text Rules
 
-* All resources in a MedComMessingMessage contains a Narrative Text defined by the [resource].Text element
+* All resources in a MedComMessagingMessage contains a Narrative Text defined by the [resource].Text element
 * The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
 * The narrative **SHALL** reflect the impact of all modifier extensions.
 
