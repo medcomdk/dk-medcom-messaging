@@ -195,7 +195,7 @@ Narratives contains two sub elements, status and div that are explained below.
 #### 2.6.1 The status element
 The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
 
-In MedCom FHIR Messages the code system musts be: "additional" meaning that it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+In MedCom FHIR Messages the status of the narrative text shall be "generated", unless other is specified. This status allows the narrativ text to include structured data and the defined extension in the div element. 
 
 A narrative in MedCom FHIR Messages can not be of code: empty.
 
