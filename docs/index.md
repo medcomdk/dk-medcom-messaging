@@ -2,13 +2,11 @@
 
 # MedCom Messaging
 
-<hr/>
-
 **Table of contents**
 * [1 Standard Documentation](#1-standard-documentation)
   * [1.1 Use Cases](#11-uses-cases)
   * [1.2 Technical Specifications](#12-technical-specification)
-<hr/>
+
  
 
 This page represents the messaging profiles (Danish: Meddelelsesprofiler) used in MedComs FHIR®© standards.

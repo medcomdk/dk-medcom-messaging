@@ -2,7 +2,7 @@
 
 
 # Introduction to the Technical specification
-<hr/>
+
 
 **Tabel of contents**
 * [1 Content Overview](#1-content-overview)
@@ -17,7 +17,7 @@
   * [2.6 Narrative text](#26-narrative-texts)
     * [2.6.1 The status element](#261-the-status-element)
     * [2.6.2 The div element](#262-the-div-element)
-<hr/>
+
 
   > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
   and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepancies.
