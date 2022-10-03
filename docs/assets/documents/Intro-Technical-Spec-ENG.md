@@ -50,13 +50,13 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
     <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html"  target="_blank">MedComMessagingMessage</a></td>
     <td class="tg-tysj">Bundle</td>
     <td class="tg-tysj">Acts as a container for the content of the message. The type of the Bundle shall always be 'message'.</td>
-    <td class="tg-tysj">Message id<br>Timestamp<br>Reference to all included profiles</td>
+    <td class="tg-tysj">Message id<br>Message type<br>Timestamp<br>Entry (Reference to all included profiles)</td>
   </tr>
   <tr>
     <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
     <td class="tg-tysj">MessageHeader</td>
     <td class="tg-tysj">The header of a message. This profile holds references to the fundamental information in a message such as sender, receiver, and the content of the message.</td>
-    <td class="tg-tysj">MessagHeader id<br>Narrative text<br>Type of message<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
+    <td class="tg-tysj">MessagHeader id<br>Narrative text<br>eventCoding (Type of message)<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
     <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
@@ -68,7 +68,7 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
     <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
     <td class="tg-tysj">Provenance</td>
     <td class="tg-tysj">Information about the activity of the current message and which organization has triggered the message. Further it describes the history of message activities.</td>
-    <td class="tg-tysj">Targets the MessageHeader<br>Timestamps<br>Activity of the message<br>Sender organization<br>If the message is a response to a previous message</td>
+    <td class="tg-tysj">Text (Narrative text)<br>Target (Targets the MessageHeader)<br>occuredDateTime(Timestamp)<br>Recorded<br>Activity of the message<br> Agent<br>Sender organization<br>Entity.role (If the message is a response to a previous message)</td>
   </tr>
 </tbody>
 </table>
@@ -195,7 +195,7 @@ Narratives contains two sub elements, status and div that are explained below.
 #### 2.6.1 The status element
 The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
 
-In MedCom FHIR Messages The code system musts be: "additional" meaning that t it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+In MedCom FHIR Messages the code system musts be: "additional" meaning that it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
 
 A narrative in MedCom FHIR Messages can not be of code: empty.
 
