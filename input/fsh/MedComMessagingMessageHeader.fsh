@@ -86,7 +86,7 @@ InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message). NB: An Acknowledgement message shall use an AcknowledgementMessageHeader, as some elements and invariants are missing."
 * destination[primary].extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
-* eventCoding = $MessageEvents#acknowledgment-message
+* eventCoding = $MessageEvents#acknowledgement-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
 * sender = Reference(d7056980-a8b2-42aa-8a0e-c1fc85d1f40d)

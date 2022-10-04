@@ -2,7 +2,7 @@
 
 This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR &reg;&copy; in message based exchange of data in Danish healthcare.
 
-The IG contains profiles which are used to define a general messaging model for MedCom messages, like [HospitalNotification](https://build.fhir.org/ig/medcomdk/dk-medcom-hospitalnotification/), [CareCommunication](https://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication/) and [Acknowledgement](https://build.fhir.org/ig/medcomdk/dk-medcom-acknowledgement/). 
+The IG contains profiles which are used to define a general messaging model for MedCom messages, like [HospitalNotification](http://medcomfhir.dk/ig/hospitalnotification/), [CareCommunication](http://medcomfhir.dk/ig/carecommunication/) and [Acknowledgement](http://medcomfhir.dk/ig/acknowledgement/). 
 
 #### General Messaging Model
 
@@ -29,10 +29,10 @@ This profile inherits from MedComCoreOrganization and is used to describe a send
 The Provenance resource describes the activity of the message and who has triggered the message. Further is it used to describes the history of message activities e.g., if the message is related to a previously exchanged message. 
 
 #### Terminology
-On [MedCom Terminology IG](https://build.fhir.org/ig/medcomdk/dk-medcom-terminology/) all referenced CodeSystem and ValueSets developed by MedCom can be found.
+On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced CodeSystem and ValueSets developed by MedCom can be found.
 
 #### Dependencies
-This IG has a dependency to the [MedComCore IG](https://build.fhir.org/ig/hl7dk/dk-medcom-core/) and [DK-core](https://hl7.dk/fhir/core/) v. 1.1.0, defined by [HL7 Denmark](https://hl7.dk/). This is currently reflected in MedComMessagingOrganization which inherits from MedComCoreOrganization. 
+This IG has a dependency to the [MedComCore IG](http://medcomfhir.dk/ig/core/) and [DK-core](https://hl7.dk/fhir/core/) v. 2.0.0, defined by [HL7 Denmark](https://hl7.dk/). This is currently reflected in MedComMessagingOrganization which inherits from MedComCoreOrganization. 
 
 ### Documentation
 
