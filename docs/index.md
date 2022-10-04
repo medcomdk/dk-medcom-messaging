@@ -10,7 +10,7 @@
  
 
 This page represents the messaging profiles (Danish: Meddelelsesprofiler) used in MedComs FHIR®© standards.
-These profiles describe fundamental information when exchanging information as messages. Therefore one or more profiles are included in all MedCom's FHIR messages. The MedCom's FHIR Messaging profiles do not alone compose a standard but are used to describe important information in MedCom's standards.Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
+These profiles describe fundamental information when exchanging information as messages. Therefore one or more messaging profiles are included in all MedCom's FHIR messages. The MedCom's FHIR Messaging profiles do not alone compose a standard but are used to describe important information in MedCom's standards.Thus, this page includes the IG solely, and technical uses cases and does not include clinical guidelines and test protocols.
 
 
 ## 1 Standard documentation
