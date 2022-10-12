@@ -203,7 +203,7 @@ A narrative in MedCom FHIR Messages can not be of code: empty.
 
 #### 2.6.2 The div element
 
-The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the<a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.w3.org/TR/1998/REC-html40-19980424/html40.pdf" target ="_blank"> HTML 4.0 standard</a>, elements (either name or href), images and internally contained style attributes.
+The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the<a href="https://www.w3.org/TR/1998/REC-html40-19980424/" target ="_blank"> HTML 4.0 standard</a>, elements (either name or href), images and internally contained style attributes.
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
 
