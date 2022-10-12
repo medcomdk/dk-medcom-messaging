@@ -27,20 +27,20 @@ Use cases describe the different scenarios a standard support. For a certain rea
 
 ### 1.2 Technical specification
 The technical specifications for the MedCom Messaging profiles are defined in an IG. 
-The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging Implementation Guide (IG) </a>includes the following profiles:
+The <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/">MedCom Messaging Implementation Guide (IG) </a>includes the following profiles:
 
-* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a>
-* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a>
-* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html"> MedComMessagingOrganization</a>
-* <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance </a>
+* <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a>
+* <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a>
+* <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html"> MedComMessagingOrganization</a>
+* <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance </a>
 
 <br><br>
 
 
 
-<!-- As mentioned previously the MedCom's FHIR Messaging profiles do not alone compose a standard but are used to describe important information in MedCom's standards. Click her to find <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/">MedCom Messaging IG</a>. -->
+<!-- As mentioned previously the MedCom's FHIR Messaging profiles do not alone compose a standard but are used to describe important information in MedCom's standards. Click her to find <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/">MedCom Messaging IG</a>. -->
 
-The link below gives an overview of the included profiles, what their purpose is, and which elements the system should support. Further the structure of the standard is described and supported with examples in different degree of technical skills.
+The link below gives an overview of the included profiles, what their purpose is, and which elements the system should support. Further the structure of the standard is described and supported with examples in different degree of technical skills.<br>
 [Click here to read overview of the content of the standard.](assets/documents/Intro-Technical-Spec-ENG.md)
 
 <!-- #### 1.1.2 What is a MedCom FHIR Message Standard
@@ -56,7 +56,7 @@ A MedCom FHIR Message Standard is the term for a collection of documentation cov
   * A GitHub Page linking it all together with further descriptions and specifications
   * This Governance
 
-The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the MedCom Messaging profiles not alone compose a standard but are used to describe central information in MedComs messaging standards. <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">Here you can find the MedCom Messaging IG.</a>
+The technical specifications for MedCom Messaging profiles are defined in an IG. As mentioned previously does the MedCom Messaging profiles not alone compose a standard but are used to describe central information in MedComs messaging standards. <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/" target="_blank">Here you can find the MedCom Messaging IG.</a>
 
 ## 1.2 MedComMessagingMessage (Bundle)
 
@@ -124,7 +124,7 @@ In addition, the message **MAY** have additional timestamps in additional resour
 
 | Links for MedComMessagingMessageHeader|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
 | [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
@@ -144,7 +144,7 @@ The element event **shall** be defined in accordance with the type of standard t
 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
 | [MedComMessagingOrganization](/assets/documents/MedComMessagingOrganization.md) |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
@@ -164,7 +164,7 @@ Provenance of a resource is a record that describes entities and processes invol
 
 | Links for MedComMessagingProvenance|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
 | [MedComs use of Provenance](/assets/documents/MedComMessagingProvenance.md) |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
