@@ -19,12 +19,12 @@
     * [2.6.2 The div element](#262-the-div-element)
 
 
-  > In case of discrepancies between the <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
+  > In case of discrepancies between the <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
   and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepancies.
   <br>
 
 ## 1 Content overview
-The <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen in <a href="#Tab1">Table 1 </a>. 
+The <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen in <a href="#Tab1">Table 1 </a>. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;width:85%}
@@ -48,25 +48,25 @@ The <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/" target="_blank">MedC
 </thead>
 <tbody>
   <tr>
-    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html"  target="_blank">MedComMessagingMessage</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html"  target="_blank">MedComMessagingMessage</a></td>
     <td class="tg-tysj">Bundle</td>
     <td class="tg-tysj">Acts as a container for the content of the message. The type of the Bundle shall always be 'message'.</td>
     <td class="tg-tysj">Message id<br>Message type<br>Timestamp<br>Entry (Reference to all included profiles)</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
     <td class="tg-tysj">MessageHeader</td>
     <td class="tg-tysj">The header of a message. This profile holds references to the fundamental information in a message such as sender, receiver, and the content of the message.</td>
     <td class="tg-tysj">MessagHeader id<br>Narrative text<br>eventCoding (Type of message)<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
     <td class="tg-tysj">Organization</td>
     <td class="tg-tysj">Information usefull to identify a messaging organization</td>
     <td class="tg-tysj">Identifier (SOR-id)<br>Identifier (EAN/GLN-number)<br>Name</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
     <td class="tg-tysj">Provenance</td>
     <td class="tg-tysj">Information about the activity of the current message and which organization has triggered the message. Further it describes the history of message activities.</td>
     <td class="tg-tysj">Text (Narrative text)<br>Target (Targets the MessageHeader)<br>occuredDateTime(Timestamp)<br>Recorded<br>Activity of the message<br> Agent<br>Sender organization<br>Entity.role (If the message is a response to a previous message)</td>
@@ -102,7 +102,7 @@ The MedComMessagingMessage is a base resouruce in all messages. This resource is
 
 | Links for MedComMessagingMessage|
 |:---|
-| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessagingMessage in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessagingMessage in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 #### 2.1.1 MedComMessagingMessage Identifiers
@@ -137,7 +137,7 @@ The MedComMessageHeader profile that is used in all MedCom FHIR Messages. The me
 
 | Links for MedComMessagingMessageHeader|
 |:---|
-| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 
@@ -146,7 +146,7 @@ This profile describes the Organization resource that is used in all MedCom FHIR
 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 
@@ -168,7 +168,7 @@ The provenance resources are a record-keeping assertion that gathers information
 <!-- 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 <br> -->
