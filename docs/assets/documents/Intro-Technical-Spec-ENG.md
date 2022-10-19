@@ -35,7 +35,7 @@ The <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messagi
 .tg .tg-tysj{color:#333333;text-align:left;vertical-align:top}
 .tg .tg-wqo7{color:#2c415c;text-align:left;vertical-align:top}
 </style>
-</div style="overflow-x:auto;">
+<div style="overflow-x:auto;">
 <table class="tg" id="Tab1">
 <caption style="color:#2c415c; font-weight:bold;text-align:center"> Tabel 1: Overview of MedCom Messaging Profiles  </caption>
 <thead>
