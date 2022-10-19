@@ -19,12 +19,12 @@
     * [2.6.2 The div element](#262-the-div-element)
 
 
-  > In case of discrepancies between the <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
+  > In case of discrepancies between the <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messaging Implementation Guide (IG)</a>
   and this page, it is the IG which should be followed. Please contact <fhir@medcom.dk> if you find discrepancies.
   <br>
 
 ## 1 Content overview
-The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen in <a href="#Tab1">Table 1 </a>. 
+The <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messaging IG</a> describes currently four FHIR profiles, which can be seen in <a href="#Tab1">Table 1 </a>. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;width:85%}
@@ -48,25 +48,25 @@ The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/" target="_b
 </thead>
 <tbody>
   <tr>
-    <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-message.html"  target="_blank">MedComMessagingMessage</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html"  target="_blank">MedComMessagingMessage</a></td>
     <td class="tg-tysj">Bundle</td>
     <td class="tg-tysj">Acts as a container for the content of the message. The type of the Bundle shall always be 'message'.</td>
     <td class="tg-tysj">Message id<br>Message type<br>Timestamp<br>Entry (Reference to all included profiles)</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
     <td class="tg-tysj">MessageHeader</td>
     <td class="tg-tysj">The header of a message. This profile holds references to the fundamental information in a message such as sender, receiver, and the content of the message.</td>
     <td class="tg-tysj">MessagHeader id<br>Narrative text<br>eventCoding (Type of message)<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
     <td class="tg-tysj">Organization</td>
     <td class="tg-tysj">Information usefull to identify a messaging organization</td>
     <td class="tg-tysj">Identifier (SOR-id)<br>Identifier (EAN/GLN-number)<br>Name</td>
   </tr>
   <tr>
-    <td class="tg-tysj"><a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank">MedComMessagingProvenance</a></td>
     <td class="tg-tysj">Provenance</td>
     <td class="tg-tysj">Information about the activity of the current message and which organization has triggered the message. Further it describes the history of message activities.</td>
     <td class="tg-tysj">Text (Narrative text)<br>Target (Targets the MessageHeader)<br>occuredDateTime(Timestamp)<br>Recorded<br>Activity of the message<br> Agent<br>Sender organization<br>Entity.role (If the message is a response to a previous message)</td>
@@ -102,7 +102,7 @@ The MedComMessagingMessage is a base resouruce in all messages. This resource is
 
 | Links for MedComMessagingMessage|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessagingMessage in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessagingMessage in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 #### 2.1.1 MedComMessagingMessage Identifiers
@@ -137,7 +137,7 @@ The MedComMessageHeader profile that is used in all MedCom FHIR Messages. The me
 
 | Links for MedComMessagingMessageHeader|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 
@@ -146,7 +146,7 @@ This profile describes the Organization resource that is used in all MedCom FHIR
 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 
@@ -168,7 +168,7 @@ The provenance resources are a record-keeping assertion that gathers information
 <!-- 
 | Links for MedComMessagingOrganization|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessagingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 <br> -->
@@ -195,7 +195,7 @@ Contained resources do not have narrative, but their content must be represented
 Narratives contains two sub elements, status and div that are explained below.
 
 #### 2.6.1 The status element
-The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
+The code system <a href="http://hl7.org/fhir/narrative-status" target="_blank">narrative status</a> defines the codes for the status element.
 
 In MedCom FHIR Messages the status of the narrative text shall be "generated", unless other is specified. This status allows the narrativ text to include structured data and the defined extension in the div element. 
 
@@ -203,7 +203,7 @@ A narrative in MedCom FHIR Messages can not be of code: empty.
 
 #### 2.6.2 The div element
 
-The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
+The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the<a href="https://www.w3.org/TR/1998/REC-html40-19980424/" target ="_blank"> HTML 4.0 standard</a>, elements (either name or href), images and internally contained style attributes.
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
 
@@ -217,6 +217,6 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 | Links for Narrative Text|
 |:---|
-|[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
-|[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
-|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
+|<a href="http://hl7.org/fhir/R4/narrative.html#Narrative" target="_blank">Narrative Text description in FHIR R4 </a>|
+|<a href="http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2" target="_blank">NarrativeStatus in FHIR R4 </a>|
+|<a href="http://hl7.org/fhir/R4/narrative.html#css" target="_blank">Styling the XHTML in FHIR R4</a>|
