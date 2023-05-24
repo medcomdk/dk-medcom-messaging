@@ -18,10 +18,10 @@ These profiles describe fundamental information when exchanging information as m
 ### 1.1 Uses cases 
 Use cases describe the different scenarios a standard support. For a certain real-world scenario, it describes the requirements for the content of a message. The purpose of the use cases is to ensure a coherent implementation and use of the MedCom's FHIR Messaging profiles. The descriptions are targeted IT-system vendors and the people responsible for the implementation in regions and municipalities.
 
-<b>The use cases are currently in preparation, as soon as they are ready they will be presented below in Danish and English:</b> 
+<b>The use cases are currently in Danish, as soon as they are ready in English they will be presented below in:</b> 
 
 [Use cases](Generelle%20tekniske%20use%20cases%20v1.0.0.pdf) 
-  > Be aware that new version of uses cases will come soon!
+  
 
 
 
