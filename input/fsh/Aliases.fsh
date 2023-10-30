@@ -13,3 +13,4 @@ Alias: $EANCode = urn:oid:1.3.88
 Alias: $activityCodes = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes
 Alias: $MessageTypes = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes
 Alias: $ActivityCodesValueset = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-activityCodes
+Alias: $ProducenID = http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID  
