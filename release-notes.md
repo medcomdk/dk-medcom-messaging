@@ -1,0 +1,1 @@
+* MedComProducerOrganization and MedComREquesterOrganization added. Both profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team.
