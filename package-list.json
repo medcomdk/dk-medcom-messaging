@@ -32,6 +32,16 @@
       "sequence": "Release",
       "fhirversion": "4.0.1",
       "current": true
+    },
+    {
+      "version": "2.1.0",
+      "date": "2023-10-31",
+      "desc": "MedCom Messaging",
+      "path": "http://medcomfhir.dk/ig/messaging/2.1.0",
+      "status": "release",
+      "sequence": "Release",
+      "fhirversion": "4.0.1",
+      "current": true
     }
   ]
 }

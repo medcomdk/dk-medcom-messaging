@@ -1,0 +1,12 @@
+{
+    "package-id": "medcom.fhir.dk.messaging",
+    "version": "1.0.0",
+    "path": "http://medcomfhir.dk/ig/messaging/2.1.0",
+    "status": "release",
+    "sequence": "Release",
+    "milestone" : true,
+    "title": "The DK MedCom Messaging",
+    "category": "MedCom Messaging",
+    "introduction": "The MedCom MedCom Messaging Implementation Guide includes profiles developed to be part of a MedCom messages.",
+    "descmd": "@release-notes.md"
+}
