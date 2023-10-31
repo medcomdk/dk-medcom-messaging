@@ -20,6 +20,16 @@ Expression: "name.exists() or extension('http://hl7.org/fhir/StructureDefinition
 Severity: #error
 
 
+// Reciever instance - new message
+Instance: 42541447-b58c-4a1a-9514-02b80494bbd3
+InstanceOf: MedComRequesterOrganization 
+Title: "Example of a reciever organization with a SOR, an EAN  and Ydrenummer identifier."
+Description: "Example of an organization with a SOR and an EAN and Ydrenummer identifier."
+* identifier[SOR-ID].value = "52581000016005" 
+* identifier[EAN-ID].value = "5790000127092"
+* identifier[Ydernummer].value = "061654"
+* contact.name.given = "OKM"
+* name = "Skødstrup Lægepraksis"
 
 // Extension: MedComMessagingRequesterInit
 // Id: MedComMessagingRequesterInit
