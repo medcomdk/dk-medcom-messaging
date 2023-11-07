@@ -1,7 +1,7 @@
 Profile: MedComRequesterOrganization
 Parent: MedComMessagingOrganization
 Id: medcom-requesterorganization
-Title: "MedComMessagingRequesterOrganization"
+Title: "MedComRequesterOrganization"
 Description: "This profile is intended to be used to represent the requester organization of the observations."
 * identifier 3.. MS
 * identifier[Ydernummer] 1.. 
