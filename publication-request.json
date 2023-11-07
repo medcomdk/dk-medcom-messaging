@@ -1,6 +1,6 @@
 {
     "package-id": "medcom.fhir.dk.messaging",
-    "version": "1.0.0",
+    "version": "2.1.1",
     "path": "http://medcomfhir.dk/ig/messaging/2.1.0",
     "status": "release",
     "sequence": "Release",
