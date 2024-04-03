@@ -20,12 +20,12 @@ Description: "An example profile of the MessageDefinition resource."
 * replaces.value 0..1 MS
 * publisher 1..1 MS SU
 * publisher = "MedCom, https://www.medcom.dk"
-* contact 1.. MS SU
+* contact 0.. MS SU
 * contact ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = id
   * ^slicing.rules = #open //#closed eller #open 
 * contact contains
-    InteroperabilityConsultant 1..1 MS SU and
+    InteroperabilityConsultant 0..1 MS SU and
     SubjectMatterExpert 0..1 MS SU
 // InteroperabilityConsultant
 * contact[InteroperabilityConsultant].id 1..1 MS
