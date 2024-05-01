@@ -57,7 +57,7 @@ The <a href="https://medcomfhir.dk/ig/messaging/" target="_blank">MedCom Messagi
     <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">MedComMessagingMessageHeader</a></td>
     <td class="tg-tysj">MessageHeader</td>
     <td class="tg-tysj">The header of a message. This profile holds references to the fundamental information in a message such as sender, receiver, and the content of the message.</td>
-    <td class="tg-tysj">MessagHeader id<br>Narrative text<br>eventCoding (Type of message)<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
+    <td class="tg-tysj">MessageHeader id<br>Narrative text<br>eventCoding (Type of message)<br>Sender Organization<br>Receiver Organization<br>Carbon Copy<br>Receiver of the receipt</td>
   </tr>
   <tr>
     <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank">MedComMessagingOrganization</a></td>
