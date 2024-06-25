@@ -19,5 +19,4 @@ Alias: $MessageDefinitionIdentifierSystemVS = http://medcomfhir.dk/ig/terminolog
 Alias: $MedComMessageDefinitionType = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-message-definition-type
 Alias: $MedComMessageDefinitionTypeVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-message-definition-type-valueset
 Alias: $UsageContextCodeSystem = http://terminology.hl7.org/CodeSystem/usage-context-type
-Alias: $UsageContextCodeSystemVS = http://medcomehmi.dk/ig/dk-ehmi-eer/ValueSet/ehmi-messagedefinition-use-context-code-valueset
-
+Alias: $UsageContextCodeSystemVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messagedefinition-use-context-code-valueset

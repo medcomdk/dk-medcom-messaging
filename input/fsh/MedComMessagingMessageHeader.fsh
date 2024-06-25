@@ -11,20 +11,21 @@ Description: "MessageHeader for MedCom messages"
 * eventCoding 1.. MS
 * eventCoding from $MessageTypes
 * eventCoding.code 1..
-* destination.extension contains MedComMessagingDestinationUseExtension named use 1..1
-* destination.extension[use] MS
+//* destination.extension contains MedComMessagingDestinationUseExtension named use
+//* destination.extension[use] MS
 * destination ^slicing.discriminator.type = #value
 * destination ^slicing.discriminator.path = "$this.extension.value"
 * destination ^slicing.rules = #closed
 * destination contains primary 1..1 and cc 0..
-* destination[primary].extension[use] 1..1 MS
+* destination[primary].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
 * destination[primary].extension[use].valueCoding = $Use#primary
 * destination[primary].receiver only Reference(MedComMessagingOrganization)
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
 * destination[primary].receiver ^short = "The primary reciever of the message"
-* destination[cc].extension[use] 1..1 MS
+* destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
+//* destination[cc].extension[use] 1..1 MS
 * destination[cc].extension[use].valueCoding = $Use#cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS
