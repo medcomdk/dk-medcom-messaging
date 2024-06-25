@@ -16,13 +16,15 @@ Description: "MessageHeader for MedCom messages"
 * destination ^slicing.discriminator.type = #value
 * destination ^slicing.discriminator.path = "$this.extension.value"
 * destination ^slicing.rules = #closed
-* destination contains primary 1..1 MS and cc 0..
+* destination contains primary 1..1 and cc 0..
+* destination[primary].extension[use] 1..1 MS
 * destination[primary].extension[use].valueCoding = $Use#primary
 * destination[primary].receiver only Reference(MedComMessagingOrganization)
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
 * destination[primary].receiver ^short = "The primary reciever of the message"
+* destination[cc].extension[use] 1..1 MS
 * destination[cc].extension[use].valueCoding = $Use#cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS

@@ -26,5 +26,5 @@ menu:
 
 parameters:
   apply-contact: true
-  apply-juristiction: true
+  apply-jurisdiction: true
   apply-publisher: true
