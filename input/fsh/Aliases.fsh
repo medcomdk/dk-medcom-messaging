@@ -14,10 +14,10 @@ Alias: $activityCodes = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-me
 Alias: $MessageTypes = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes
 Alias: $ActivityCodesValueset = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-activityCodes
 Alias: $ProducenID = http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID  
-Alias: $MessageDefinitionIdentifierSystem = medcom-messagedefinition-identifer-system
-Alias: $MessageDefinitionIdentifierSystemVS = medcom-messagedefinition-identifer-system-valueset
-Alias: $MedComMessageDefinitionType = medcom-message-definition-type
-Alias: $MedComMessageDefinitionTypeVS = medcom-message-definition-type-valueset
+Alias: $MessageDefinitionIdentifierSystem = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messagedefinition-identifer-system
+Alias: $MessageDefinitionIdentifierSystemVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messagedefinition-identifer-system-valueset
+Alias: $MedComMessageDefinitionType = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-message-definition-type
+Alias: $MedComMessageDefinitionTypeVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-message-definition-type-valueset
 Alias: $UsageContextCodeSystem = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $UsageContextCodeSystemVS = http://medcomehmi.dk/ig/dk-ehmi-eer/ValueSet/ehmi-messagedefinition-use-context-code-valueset
 
