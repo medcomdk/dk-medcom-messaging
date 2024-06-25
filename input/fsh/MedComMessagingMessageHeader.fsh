@@ -38,6 +38,7 @@ Description: "MessageHeader for MedCom messages"
 * source ^short = "Contains the information about the target for the Acknowledgement message."
 * text MS
 * text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
+* definition MS 
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension
