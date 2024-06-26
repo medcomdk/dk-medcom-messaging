@@ -26,7 +26,7 @@ Severity: #error
 Expression: "entry.resource.ofType(Provenance).exists()"
 
 Invariant: medcom-messaging-3
-Description: "All Provenance resources shall conform to medcom-messaging-provenance profile"
+Description: "All Provenance resources shall conform to the medcom-messaging-provenance profile"
 Severity: #error
 Expression: "entry.resource.ofType(Provenance).conformsTo('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance').allTrue()"
 
