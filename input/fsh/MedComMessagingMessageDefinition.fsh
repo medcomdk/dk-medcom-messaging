@@ -1,5 +1,6 @@
 Profile: MedComMessagingMessageDefinition
 Parent: MessageDefinition
+Id: medcom-messaging-messagedefinition
 Description: "An example profile of the MessageDefinition resource."
 //* url from ehmi-medcom-message-definition-uri-valueset
 * identifier 1..1 MS SU
@@ -59,52 +60,3 @@ Description: "An example profile of the MessageDefinition resource."
 * category 1..1 MS SU
 * category = #notification (exactly)
 * responseRequired 1..1 MS 
-
-CodeSystem: MessageDefinitionIdentifierSystem
-Id: medcom-messagedefinition-identifer-system
-Title: "MessageDefinitionIdentifierSystem CodeSystem"
-Description: "MessageDefinitionIdentifierSystemCS for the EHMI Messaging Infrastructure"
-* ^version  =  "1.0.0"
-* ^status  =  #active
-* ^date  =  "2024-01-01"
-* ^experimental = true
-* ^caseSensitive = true
-* #urn:dk:healthcare:medcom:messaging:edifact "urn:dk:healthcare:medcom:messaging:edifact"
-* #urn:dk:healthcare:medcom:messaging:fhir "urn:dk:healthcare:medcom:messaging:fhir"
-* #urn:dk:healthcare:medcom:messaging:oioxml "urn:dk:healthcare:medcom:messaging:oioxml"
-* #urn:dk:healthcare:medcom:messaging:envelope "urn:dk:healthcare:medcom:messaging:envelope"
-
-ValueSet: MessageDefinitionIdentifierSystemVS
-Id: medcom-messagedefinition-identifer-system-valueset
-Title: "MessageDefinitionIdentifierSystem Valueset"
-Description: "MessageDefinitionIdentifierSystemVS for the EHMI Messaging Infrastructure"
-* ^version  =  "1.0.0"
-* ^status  =  #active
-* ^date  =  "2023-09-01"
-* ^experimental = true
-* include codes from system medcom-messagedefinition-identifer-system
-
-CodeSystem: MedComMessageDefinitionType
-Id: medcom-message-definition-type
-Title: "MedComMessageDefinitionType CodeSystem"
-Description: "MedComMessageDefinitionTypeCS for the EHMI Messaging Infrastructure"
-* ^version  =  "1.0.0"
-* ^status  =  #active
-* ^date  =  "2023-09-01"
-* ^experimental = true
-* ^caseSensitive = true
-* #EDIFACT "Edifact"
-* #OIOXML "OIOXML"
-* #FHIR "FHIR"
-* #ENVELOPE "Envelope"
-
-ValueSet: MedComMessageDefinitionTypeVS
-Id: medcom-message-definition-type-valueset
-Title: "MedComMessageDefinitionType Valueset"
-Description: "MedComMessageDefinitionTypeVS for the EHMI Messaging Infrastructure"
-* ^version  =  "1.0.0"
-* ^status  =  #active
-* ^date  =  "2023-09-01"
-* ^experimental = true
-* include codes from system medcom-message-definition-type
-

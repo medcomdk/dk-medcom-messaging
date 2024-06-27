@@ -1,1 +1,2 @@
-* MedComProducerOrganization and MedComRequesterOrganization added. Both profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team.
+* Added the profiles MedComMessagingMessageDefinition and MedComMessagingMessageDefinition-fhir, as well as MustSupport on the element MessageHeader.definition. 
+* Corrected invariant medcom-messaging-1 and medcom-messaging-3

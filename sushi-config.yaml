@@ -13,7 +13,7 @@ publisher:
   url: http://www.medcom.dk
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 dependencies:
-  hl7.fhir.dk.core: 2.0.0
+  hl7.fhir.dk.core: 3.2.0
   medcom.fhir.dk.core: 2.3.0
   
 menu:
@@ -26,5 +26,5 @@ menu:
 
 parameters:
   apply-contact: true
-  apply-juristiction: true
+  apply-jurisdiction: true
   apply-publisher: true

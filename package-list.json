@@ -17,7 +17,7 @@
       "version": "1.0.3",
       "date": "2021-03-23",
       "desc": "MedCom Messaging",
-      "path": "http://medcomfhir.dk/fhir/messaging/ig/dk-medcom-messaging",
+      "path": "http://medcomfhir.dk/ig/dk-medcom-messaging",
       "status": "trial-use",
       "sequence": "STU",
       "fhirVersion": "4.0.1",

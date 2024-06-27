@@ -1,7 +1,7 @@
 Alias: $StatusCodes = http://hl7.org/fhir/encounter-status
 Alias: $ActCodes = http://terminology.hl7.org/CodeSystem/v3-ActCode 
 Alias: $EventStatus = http://hl7.org/fhir/event-status
-Alias: $CategoryCodes = http://medcomfhir.dk/fhir/carecommunication/CodeSystem/medcom-careCommunication-categoryCodes
+Alias: $CategoryCodes = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-careCommunication-categories
 Alias: $ServerityCode = http://hl7.org/fhir/issue-severity
 Alias: $CodeCode = http://hl7.org/fhir/issue-type
 Alias: $AcknowledgementCode = http://hl7.org/fhir/ValueSet/Acknowledgement-code
@@ -14,10 +14,9 @@ Alias: $activityCodes = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-me
 Alias: $MessageTypes = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes
 Alias: $ActivityCodesValueset = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-activityCodes
 Alias: $ProducenID = http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID  
-Alias: $MessageDefinitionIdentifierSystem = medcom-messagedefinition-identifer-system
-Alias: $MessageDefinitionIdentifierSystemVS = medcom-messagedefinition-identifer-system-valueset
-Alias: $MedComMessageDefinitionType = medcom-message-definition-type
-Alias: $MedComMessageDefinitionTypeVS = medcom-message-definition-type-valueset
+Alias: $MessageDefinitionIdentifierSystem = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messagedefinition-identifer-system
+Alias: $MessageDefinitionIdentifierSystemVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messagedefinition-identifer-system-valueset
+Alias: $MedComMessageDefinitionType = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-message-definition-type
+Alias: $MedComMessageDefinitionTypeVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-message-definition-type-valueset
 Alias: $UsageContextCodeSystem = http://terminology.hl7.org/CodeSystem/usage-context-type
-Alias: $UsageContextCodeSystemVS = http://medcomehmi.dk/ig/dk-ehmi-eer/ValueSet/ehmi-messagedefinition-use-context-code-valueset
-
+Alias: $UsageContextCodeSystemVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messagedefinition-use-context-code-valueset
