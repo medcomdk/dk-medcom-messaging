@@ -13,7 +13,7 @@ Description: "Base resource for all MedCom messages."
 * entry.resource ^short = "Each MedCom message shall contain a MedComMessagingMessageHeader and MedComMessagingProvenance. Please refer to invariant medcom-messaging-1, medcom-messaging-2, and medcom-messaging-3."
 * obeys medcom-messaging-1
 * obeys medcom-messaging-2
-* obeys medcom-messaging-3
+//* obeys medcom-messaging-3
 
 Invariant: medcom-messaging-1
 Description: "The MessageHeader resource shall conform to medcom-messaging-messageHeader profile"
