@@ -1,2 +1,2 @@
-* Added the profiles MedComMessagingMessageDefinition and MedComMessagingMessageDefinition-fhir, as well as MustSupport on the element MessageHeader.definition. 
+* Added the profiles MedComMessagingMessageDefinition and MedComMessagingMessageDefinition-fhir, as well as MustSupport on the element MedComMessagingMessageHeader.definition. 
 * Corrected invariant medcom-messaging-1 and medcom-messaging-3
