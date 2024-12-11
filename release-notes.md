@@ -1,2 +1,1 @@
-* Added the profiles MedComMessagingMessageDefinition and MedComMessagingMessageDefinition-fhir, as well as MustSupport on the element MedComMessagingMessageHeader.definition. 
-* Corrected invariant medcom-messaging-1 and removed medcom-messaging-3
+Rebuild of IG. No changes made.
