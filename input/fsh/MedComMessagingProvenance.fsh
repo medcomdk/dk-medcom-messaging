@@ -36,11 +36,11 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
 * text MS
 
-// CareCommunication new-message example
+// New-message example
 Instance: 9c284936-5454-4116-95fc-3c8eeeed2400
 InstanceOf: MedComMessagingProvenance
-Title: "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"
-Description: "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"
+Title: "MedComMessagingProvenance example. The Provenance instance is only valid if used in a bundle (message) - new message"
+Description: "MedComMessagingProvenance example. The Provenance instance is only valid if used in a bundle (message) - new message"
 Usage: #example
 * target = Reference(42c01434-8feb-11ec-b909-0242ac120002)
 * occurredDateTime = 2020-09-28T12:34:56Z

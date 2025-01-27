@@ -4,7 +4,7 @@ name: MedComMessaging
 title: "DK MedCom Messaging"
 description: The DK MedCom Messaging IG
 status: active
-version: "2.2.1"
+version: "3.0.0"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: release
