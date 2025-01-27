@@ -5,7 +5,7 @@ Description: "An example profile of the MessageDefinition-fhir resource."
 * identifier.system = $MessageDefinitionIdentifierSystem#urn:dk:healthcare:medcom:messaging:fhir (exactly)
 * identifier.type = $MedComMessageDefinitionType#FHIR
 * useContext.code = $UsageContextCodeSystem#workflow (exactly)
-* responseRequired = #always (exactly)
+* responseRequired MS
 * allowedResponse.message.value = "http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"
 //InteroperabilityConsultant
 * contact[InteroperabilityConsultant].name = "MedCom FHIR Team"
