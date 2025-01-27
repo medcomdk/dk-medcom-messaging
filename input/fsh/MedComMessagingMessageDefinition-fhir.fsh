@@ -3,7 +3,7 @@ Parent: MedComMessagingMessageDefinition
 Id: medcom-messaging-messagedefinition-fhir
 Description: "An example profile of the MessageDefinition-fhir resource."
 * identifier.system = $MessageDefinitionIdentifierSystem#urn:dk:healthcare:medcom:messaging:fhir (exactly)
-* identifier.type = $MedComMessageDefinitionType#FHIR
+* identifier.type = $MedComMessageDefinitionType#FHIR (exactly)
 * useContext.code = $UsageContextCodeSystem#workflow (exactly)
 * responseRequired MS
 * allowedResponse.message.value = "http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"
