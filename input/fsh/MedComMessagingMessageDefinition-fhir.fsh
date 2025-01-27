@@ -9,7 +9,7 @@ Description: "An example profile of the MessageDefinition-fhir resource."
 * allowedResponse.message.value = "http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"
 //InteroperabilityConsultant
 * contact[InteroperabilityConsultant].name = "MedCom FHIR Team"
-* contact[InteroperabilityConsultant].telecom.value = "FHIR@medcom.dk"
+* contact[InteroperabilityConsultant].telecom.value = "fhir@medcom.dk"
 * status ^short = "Must always be defined in the individual MessageDefinition"
 * replaces ^short = "Takes the place of a MessageDefinition that is superseded by this MessageDefinition."
 * id MS
