@@ -13,12 +13,12 @@ Please refer to the tab "Snapshot Table(Must support)" below for the definition 
 
 #### Activity
 
-In MedCom messaging, the Provenance.target shall always be a reference to a [MedComMessagingMessageHeader](http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html) or an inherited of MedComMessagingMessageHeader. 
+In MedCom messaging, the Provenance.target shall always be a reference to a [MedComMessagingMessageHeader](StructureDefinition-medcom-messaging-messageHeader.html) or an inherited of MedComMessagingMessageHeader. 
 The target references the resources on which the activity has occurred. For instances if Provenance.activity is 'new-message', it describes that the message referenced from the Messageheader is a new message. 
 
 The activitycodes used to describe the activity of the MedCom message may differ between standard e.g. [HospitalNotification](http://medcomfhir.dk/ig/hospitalnotification/) and [CareCommunication](http://medcomfhir.dk/ig/carecommunication/). Due to the different requirements of activities in a standard, it should be expected that there will be different invariants pointing at specific ValueSets for the given standard.
 
-Provenance.agent describes the actor who is responsible for the activity that took place, by referencing the organisation responsible for the activity. The referenced organisation shall be an [MedComMessagingOrganization](http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html).
+Provenance.agent describes the actor who is responsible for the activity that took place, by referencing the organisation responsible for the activity. The referenced organisation shall be an [MedComMessagingOrganization](StructureDefinition-medcom-messaging-organization.html).
 
 #### History
 
