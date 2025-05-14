@@ -1,13 +1,11 @@
 {
     "package-id": "medcom.fhir.dk.messaging",
-    "version": "2.2.2",
-    "path": "http://medcomfhir.dk/ig/messaging/2.2.2",
+    "version": "3.0.0",
+    "path": "http://medcomfhir.dk/ig/messaging/3.0.0",
     "status": "release",
     "sequence": "Release",
-    "mode" : "milestone",
     "first": false,
-    "title": "DK MedCom Messaging",
-    "category": "Frameworks",
-    "introduction": "This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication.",
-    "descmd": "@release-notes.md"
+    "mode" : "milestone",
+    "descmd": "@release-notes.md",
+    "desc": "Refines the MedComMessagingMessageDefinition-fhir profile into a strictly governed contract, reducing ambiguity through clear version control"
 }
