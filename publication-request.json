@@ -4,9 +4,8 @@
     "path": "http://medcomfhir.dk/ig/messaging/3.0.0",
     "status": "release",
     "sequence": "Release",
-    "milestone" : true,
-    "title": "The DK MedCom Messaging",
-    "category": "MedCom Messaging",
-    "introduction": "The MedCom MedCom Messaging Implementation Guide includes profiles developed to be part of a MedCom messages.",
-    "descmd": "@release-notes.md"
+    "first": false,
+    "mode" : "milestone",
+    "descmd": "@release-notes.md",
+    "desc": "Refines the MedComMessagingMessageDefinition-fhir profile into a strictly governed contract, reducing ambiguity through clear version control"
 }
