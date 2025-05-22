@@ -6,10 +6,11 @@ Description: "An example profile of the MessageDefinition-fhir resource."
 * identifier.type = $MedComMessageDefinitionType#FHIR (exactly)
 * useContext.code = $UsageContextCodeSystem#workflow (exactly)
 * responseRequired MS
-* allowedResponse.message.value = "http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"
+
 //InteroperabilityConsultant
 * contact[InteroperabilityConsultant].name = "MedCom FHIR Team"
 * contact[InteroperabilityConsultant].telecom.value = "fhir@medcom.dk"
+* contact[InteroperabilityConsultant].telecom MS
 * status ^short = "Must always be defined in the individual MessageDefinition"
 * replaces ^short = "Takes the place of a MessageDefinition that is superseded by this MessageDefinition."
 * id MS
@@ -32,25 +33,4 @@ Description: "An example profile of the MessageDefinition-fhir resource."
 * useContext.code MS
 * useContext.code.code MS SU
 * useContext.code.system MS
-* contact[InteroperabilityConsultant].telecom MS
 * contact[SubjectMatterExpert].telecom MS
-
-
-//* useContext.code.system = $UsageContextCodeSystem (exactly)
-//* allowedResponse.message.value = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
-
-//SubjectMatterExpert
-//* contact[SubjectMatterExpert].name = "Subject Matter Expert, Kirsten Christiansen"
-//* contact[SubjectMatterExpert].telecom.system = #email
-//* contact[SubjectMatterExpert].telecom.value = "krc@medcom.dk" 
-//* contact[SubjectMatterExpert].telecom.use = #work
-
-/*
-Profile: EerMsgDefHomeCareObservation
-Parent: EerMessageDefinitionFhir
-Description: "An example profile of the MessageDefinition-fhir resource."
-* identifier.system = $EerMessageDefinitionIdentifierSystem#urn:dk:healthcare:medcom:messaging:fhir (exactly)
-* identifier.type = $EHMIMedComMessageDefinitionType#FHIR
-* useContext.code = $EHMIUsageContextCodeSystem#workflow (exactly)
-* useContext.code.system = $EHMIUsageContextCodeSystem (exactly)
-*/
