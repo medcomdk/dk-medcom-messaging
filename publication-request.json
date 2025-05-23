@@ -4,10 +4,8 @@
     "path": "http://medcomfhir.dk/ig/messaging/2.2.2",
     "status": "release",
     "sequence": "Release",
-    "mode" : "milestone",
+    "mode" : "working",
     "first": false,
-    "title": "DK MedCom Messaging",
-    "category": "Frameworks",
-    "introduction": "This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication.",
-    "descmd": "@release-notes.md"
+    "descmd": "@release-notes.md",
+    "desc": "Fix to local hyperlink issues"
 }
