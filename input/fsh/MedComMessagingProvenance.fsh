@@ -25,7 +25,6 @@ Description: "Provenance information about the messages preceeding the current m
 * entity MS
 * entity ^definition = "Shall only be included if the current message is a response to a previous message."
 * entity.role MS
-* entity.role ^short = "When a message is a response, a correction or a forwarding message the role shall be 'revision' and when the message is a cancellation the role shall be 'removal'."
 * entity.what MS
 * entity.what ^short = "A reference to the previous message. If the previous message is a FHIR message, the reference element must be used and if the previous message is an EDIFACT or OIOXML, the identifier element must be used."
 * entity.what.identifier MS
