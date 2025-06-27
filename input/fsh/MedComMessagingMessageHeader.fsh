@@ -5,6 +5,10 @@ Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle. For governance of MedCom narratives, see https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/050_Governance-for-MedCom-FHIR-Messages.html#6-narrative-texts."
+* text.status MS
+* text.div MS
 * event[x] 
 * event[x] only Coding
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
@@ -18,7 +22,8 @@ Description: "MessageHeader for MedCom messages"
 * destination ^slicing.rules = #closed
 * destination contains primary 1..1 and cc 0..
 * destination[primary].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
-* destination[primary].extension[use].valueCoding = $Use#primary
+* destination[primary].extension[use].valueCoding.system = $Use
+* destination[primary].extension[use].valueCoding.code = #primary
 * destination[primary].receiver only Reference(MedComMessagingOrganization)
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
@@ -26,7 +31,8 @@ Description: "MessageHeader for MedCom messages"
 * destination[primary].receiver ^short = "The primary reciever of the message"
 * destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
 //* destination[cc].extension[use] 1..1 MS
-* destination[cc].extension[use].valueCoding = $Use#cc
+* destination[cc].extension[use].valueCoding.system = $Use
+* destination[cc].extension[use].valueCoding.code = #cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS
 * destination[cc].receiver ^type.aggregation = #bundled
@@ -39,8 +45,6 @@ Description: "MessageHeader for MedCom messages"
 * source MS
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
-* text MS
-* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 * definition MS 
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
