@@ -3,10 +3,13 @@ Parent: MedComCoreOrganization
 Id: medcom-messaging-organization
 Description: "A formally recognized organizations registered for exchanging messages within Danish healthcare, registered with a SOR identifier issued by The Danish Health Data Authority"
 * . ^short = "A formally recognized organizations within Danish healthcare"
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle. For governance of MedCom narratives, see https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/050_Governance-for-MedCom-FHIR-Messages.html#6-narrative-texts."
+* text.status MS
+* text.div MS
 * identifier 2.. MS
 * identifier[EAN-ID] 1.. 
 * identifier[EAN-ID] MS SU
-* text MS
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
