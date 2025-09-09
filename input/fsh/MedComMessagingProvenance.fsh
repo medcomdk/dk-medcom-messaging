@@ -32,7 +32,7 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.identifier ^short = "If previous message is EDIFACT or OIOXML, this element must be expressed as [lokationsnummer]#[brevid] from the EDIFACT or OIOXML message."
 * entity.what.reference MS
 * entity.what.reference ^definition = "Shall contain the message header id of messages given as input to the activity"
-* entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
+* entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message, formatted as MessageHeader/[id]."
 * text MS
 
 // New-message example
