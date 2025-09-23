@@ -14,24 +14,35 @@ Description: "MessageHeader for MedCom messages"
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 * eventCoding 1.. MS
 * eventCoding from $MessageTypes
-* eventCoding.code 1..
+* eventCoding.code 1.. MS
 //* destination.extension contains MedComMessagingDestinationUseExtension named use
 //* destination.extension[use] MS
+* destination MS
 * destination ^slicing.discriminator.type = #value
 * destination ^slicing.discriminator.path = "$this.extension.value"
 * destination ^slicing.rules = #closed
 * destination contains primary 1..1 and cc 0..
+* destination[primary] MS
 * destination[primary].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
 * destination[primary].extension[use].valueCoding.system = $Use
+* destination[primary].extension[use].url MS
+* destination[primary].extension[use].value[x] MS
+* destination[primary].extension[use].valueCoding.code 1.. MS
+* destination[primary].extension[use].valueCoding.system 1.. MS
 * destination[primary].extension[use].valueCoding.code = #primary
 * destination[primary].receiver only Reference(MedComMessagingOrganization)
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
 * destination[primary].receiver ^short = "The primary reciever of the message"
+* destination[cc] MS
 * destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
 //* destination[cc].extension[use] 1..1 MS
 * destination[cc].extension[use].valueCoding.system = $Use
+* destination[cc].extension[use].url MS
+* destination[cc].extension[use].value[x] MS
+* destination[cc].extension[use].valueCoding.code 1.. MS
+* destination[cc].extension[use].valueCoding.system 1.. MS
 * destination[cc].extension[use].valueCoding.code = #cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS
@@ -46,6 +57,16 @@ Description: "MessageHeader for MedCom messages"
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
 * definition MS 
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(eventCoding.code)
+* insert ProducerShallPutInNarrative(destination[primary].extension[use].valueCoding.code)
+* insert ProducerShallPutInNarrative(destination[primary].endpoint)
+* insert ProducerShallPutInNarrative(destination[primary].receiver)
+* insert ProducerShallPutInNarrative(destination[cc].extension[use].valueCoding.code)
+* insert ProducerShallPutInNarrative(destination[cc].endpoint)
+* insert ProducerShallPutInNarrative(destination[cc].receiver)
+* insert ProducerShallPutInNarrative(sender)
+* insert ProducerShallPutInNarrative(source.endpoint)
 
 Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
 InstanceOf: MedComMessagingDestinationUseExtension

@@ -7,9 +7,15 @@ Description: "A formally recognized organizations registered for exchanging mess
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
+* id MS
 * identifier 2.. MS
 * identifier[EAN-ID] 1.. 
-* identifier[EAN-ID] MS SU
+* identifier[EAN-ID] MS
+* text MS
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(identifier[SOR-ID])
+* insert ProducerShallPutInNarrative(identifier[EAN-ID])
+* insert ProducerShallPutInNarrative(name)
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
