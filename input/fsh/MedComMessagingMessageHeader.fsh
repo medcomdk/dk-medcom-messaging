@@ -5,6 +5,10 @@ Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
 * event[x] 
 * event[x] only Coding
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
@@ -20,6 +24,7 @@ Description: "MessageHeader for MedCom messages"
 * destination contains primary 1..1 and cc 0..
 * destination[primary] MS
 * destination[primary].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
+* destination[primary].extension[use].valueCoding.system = $Use
 * destination[primary].extension[use].url MS
 * destination[primary].extension[use].value[x] MS
 * destination[primary].extension[use].valueCoding.code 1.. MS
@@ -32,6 +37,8 @@ Description: "MessageHeader for MedCom messages"
 * destination[primary].receiver ^short = "The primary reciever of the message"
 * destination[cc] MS
 * destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
+//* destination[cc].extension[use] 1..1 MS
+* destination[cc].extension[use].valueCoding.system = $Use
 * destination[cc].extension[use].url MS
 * destination[cc].extension[use].value[x] MS
 * destination[cc].extension[use].valueCoding.code 1.. MS
@@ -49,8 +56,6 @@ Description: "MessageHeader for MedCom messages"
 * source MS
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
-* text MS
-* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
 * definition MS 
 * insert ProducerShallPutInNarrative(id)
 * insert ProducerShallPutInNarrative(eventCoding.code)

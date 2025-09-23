@@ -2,6 +2,10 @@ Profile: MedComMessagingProvenance
 Parent: Provenance
 Id: medcom-messaging-provenance
 Description: "Provenance information about the messages preceeding the current message"
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
 * id MS
 * target 1..1 MS
 * target only Reference(MedComMessagingMessageHeader)
@@ -35,7 +39,6 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.reference MS
 * entity.what.reference ^definition = "Shall contain the message header id of messages given as input to the activity"
 * entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
-* text MS
 * insert ProducerShallPutInNarrative(id)
 * insert ProducerShallPutInNarrative(target)
 * insert ProducerShallPutInNarrative(occurredDateTime)

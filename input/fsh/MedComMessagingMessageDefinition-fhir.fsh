@@ -16,21 +16,21 @@ Description: "An example profile of the MessageDefinition-fhir resource."
 * url MS
 * identifier.system MS
 * identifier.period MS
-* identifier.type.coding.system MS SU
-* identifier.type.coding.code MS SU
+* identifier.type.coding.system MS
+* identifier.type.coding.code MS
 * status MS
-* jurisdiction.coding MS SU
-* jurisdiction.coding.code MS SU
+* jurisdiction.coding MS
+* jurisdiction.coding.code MS
 * date MS
 * event[x] MS
 * description MS
 * purpose MS
 * useContext MS
-* useContext.value[x] MS SU
-* useContext.valueCodeableConcept MS SU
-* useContext.valueCodeableConcept.text MS SU
+* useContext.value[x] MS
+* useContext.valueCodeableConcept MS
+* useContext.valueCodeableConcept.text MS
 * useContext.code MS
-* useContext.code.code MS SU
+* useContext.code.code MS
 * useContext.code.system MS
 * contact[InteroperabilityConsultant].telecom MS
 * contact[SubjectMatterExpert].telecom MS
