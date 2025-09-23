@@ -3,10 +3,19 @@ Parent: MedComCoreOrganization
 Id: medcom-messaging-organization
 Description: "A formally recognized organizations registered for exchanging messages within Danish healthcare, registered with a SOR identifier issued by The Danish Health Data Authority"
 * . ^short = "A formally recognized organizations within Danish healthcare"
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
+* id MS
 * identifier 2.. MS
 * identifier[EAN-ID] 1.. 
-* identifier[EAN-ID] MS SU
+* identifier[EAN-ID] MS
 * text MS
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(identifier[SOR-ID])
+* insert ProducerShallPutInNarrative(identifier[EAN-ID])
+* insert ProducerShallPutInNarrative(name)
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d
