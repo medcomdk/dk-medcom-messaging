@@ -2,9 +2,11 @@ Profile: MedComMessagingProvenance
 Parent: Provenance
 Id: medcom-messaging-provenance
 Description: "Provenance information about the messages preceeding the current message"
+* id MS
 * target 1..1 MS
 * target only Reference(MedComMessagingMessageHeader)
 * target ^short = "Targets the MedComMessagingMessageHeader from the current message."
+* occurred[x] MS
 * occurredDateTime 1.. MS
 * occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include a date, a time and timezone."
 * recorded MS
@@ -34,6 +36,14 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.reference ^definition = "Shall contain the message header id of messages given as input to the activity"
 * entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
 * text MS
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(target)
+* insert ProducerShallPutInNarrative(occurredDateTime)
+* insert ProducerShallPutInNarrative(activity.coding.code)
+* insert ProducerShallPutInNarrative(agent.who)
+* insert ProducerShallPutInNarrative(entity.role)
+* insert ProducerShallPutInNarrative(entity.what.reference)
+* insert ProducerShallPutInNarrative(entity.what.identifier)
 
 // New-message example
 Instance: 9c284936-5454-4116-95fc-3c8eeeed2400
