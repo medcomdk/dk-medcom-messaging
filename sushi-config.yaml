@@ -22,7 +22,9 @@ menu:
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
+  Dependencies: dependencies.html
   Downloads: downloads.html
+
 
 parameters:
   apply-contact: true
