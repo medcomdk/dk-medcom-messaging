@@ -17,16 +17,18 @@ dependencies:
   medcom.fhir.dk.core: 3.0.0
   
 menu:
-  Table of Contents: toc.html
   Home: index.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
-  Dependencies: dependencies.html
-  Downloads: downloads.html
-
+  More:
+    Table of Contents: toc.html
+    Downloads: downloads.html
+    Dependencies: dependencies.html
 
 parameters:
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
+  pin-canonicals: pin-multiples
+  excludettl: true
