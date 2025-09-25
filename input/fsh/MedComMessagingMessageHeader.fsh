@@ -5,16 +5,22 @@ Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
+
 * text MS
 * text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
 * text.status MS
 * text.div MS
+
+* definition MS 
+
 * event[x] 
 * event[x] only Coding
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 * eventCoding 1.. MS
 * eventCoding from $MessageTypes
 * eventCoding.code 1.. MS
+* eventCoding.system MS
+* eventCoding.system 1..
 
 * destination MS
 * destination ^slicing.discriminator.type = #value
@@ -30,6 +36,7 @@ Description: "MessageHeader for MedCom messages"
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
 * destination[primary].receiver ^short = "The primary reciever of the message"
+
 * destination[cc] MS
 * destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
 * destination[cc].extension[use].valueCoding.system = $Use
@@ -39,14 +46,16 @@ Description: "MessageHeader for MedCom messages"
 * destination[cc].receiver ^type.aggregation = #bundled
 * destination[cc].endpoint MS
 * destination[cc].receiver ^short = "The carbon copy reciever of the message. Is only used when a message has multiple recievers."
+
 * sender 1.. MS
 * sender ^type.aggregation = #bundled
 * sender only Reference(MedComMessagingOrganization)
 * sender ^short = "The actual sender of the message"
+
 * source MS
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
-* definition MS 
+
 * insert ProducerShallPutInNarrative(id)
 * insert ProducerShallPutInNarrative(eventCoding.code)
 * insert ProducerShallPutInNarrative(destination[primary].endpoint)
