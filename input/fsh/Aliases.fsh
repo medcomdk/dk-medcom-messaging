@@ -20,3 +20,4 @@ Alias: $MedComMessageDefinitionType = http://medcomfhir.dk/ig/terminology/CodeSy
 Alias: $MedComMessageDefinitionTypeVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-message-definition-type-valueset
 Alias: $UsageContextCodeSystem = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $UsageContextCodeSystemVS = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messagedefinition-use-context-code-valueset
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation

@@ -2,9 +2,15 @@ Profile: MedComMessagingProvenance
 Parent: Provenance
 Id: medcom-messaging-provenance
 Description: "Provenance information about the messages preceeding the current message"
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
+* id MS
 * target 1..1 MS
 * target only Reference(MedComMessagingMessageHeader)
 * target ^short = "Targets the MedComMessagingMessageHeader from the current message."
+* occurred[x] MS
 * occurredDateTime 1.. MS
 * occurredDateTime ^short = "A human readable date and time for when the message is sent. Shall include a date, a time and timezone."
 * recorded MS
@@ -12,7 +18,8 @@ Description: "Provenance information about the messages preceeding the current m
 * activity 1.. MS
 * activity from $ActivityCodesValueset
 * activity ^definition = "Activity that occurred and triggered the current or a previous message"
-* activity.coding 1.. MS
+* activity.coding 1..1 MS
+* activity.coding.system 1.. MS
 * activity.coding.code 1.. MS
 * activity.coding.code ^definition = "The activity defined by the system"
 * agent 1.. MS
@@ -25,7 +32,6 @@ Description: "Provenance information about the messages preceeding the current m
 * entity MS
 * entity ^definition = "Shall only be included if the current message is a response to a previous message."
 * entity.role MS
-* entity.role ^short = "When a message is a response, a correction or a forwarding message the role shall be 'revision' and when the message is a cancellation the role shall be 'removal'."
 * entity.what MS
 * entity.what ^short = "A reference to the previous message. If the previous message is a FHIR message, the reference element must be used and if the previous message is an EDIFACT or OIOXML, the identifier element must be used."
 * entity.what.identifier MS
@@ -33,8 +39,15 @@ Description: "Provenance information about the messages preceeding the current m
 * entity.what.identifier ^short = "If previous message is EDIFACT or OIOXML, this element must be expressed as [lokationsnummer]#[brevid] from the EDIFACT or OIOXML message."
 * entity.what.reference MS
 * entity.what.reference ^definition = "Shall contain the message header id of messages given as input to the activity"
-* entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message."
-* text MS
+* entity.what.reference ^short = "If the previous message is a FHIR message, this element must hold the MessageHeader.id from previous message, formatted as MessageHeader/[id]."
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(target)
+* insert ProducerShallPutInNarrative(occurredDateTime)
+* insert ProducerShallPutInNarrative(activity.coding.code)
+* insert ProducerShallPutInNarrative(agent.who)
+* insert ProducerShallPutInNarrative(entity.role)
+* insert ProducerShallPutInNarrative(entity.what.reference)
+* insert ProducerShallPutInNarrative(entity.what.identifier)
 
 // New-message example
 Instance: 9c284936-5454-4116-95fc-3c8eeeed2400

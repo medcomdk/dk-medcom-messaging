@@ -1,11 +1,10 @@
 {
     "package-id": "medcom.fhir.dk.messaging",
-    "version": "3.0.0",
-    "path": "http://medcomfhir.dk/ig/messaging/3.0.0",
-    "status": "release",
-    "sequence": "Release",
-    "first": false,
-    "mode" : "milestone",
+    "version": "4.0.0-trial-use",
+    "path": "http://medcomfhir.dk/ig/messaging/4.0.0-trial-use",
+    "status": "trial-use",
+    "sequence": "Release 4.x.x",
+    "mode" : "working",
     "descmd": "@release-notes.md",
-    "desc": "Refines the MedComMessagingMessageDefinition-fhir profile into a strictly governed contract, reducing ambiguity through clear version control"
+    "desc": "See release notes"
 }

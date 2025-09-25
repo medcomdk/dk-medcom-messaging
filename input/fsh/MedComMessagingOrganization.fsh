@@ -5,8 +5,8 @@ Description: "A formally recognized organizations registered for exchanging mess
 * . ^short = "A formally recognized organizations within Danish healthcare"
 * identifier 2.. MS
 * identifier[EAN-ID] 1.. 
-* identifier[EAN-ID] MS SU
-* text MS
+* identifier[EAN-ID] MS
+* insert ProducerShallPutInNarrative(identifier[EAN-ID])
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d

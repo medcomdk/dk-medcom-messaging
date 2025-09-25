@@ -5,55 +5,72 @@ Description: "MessageHeader for MedCom messages"
 * id 1..
 * id MS
 * id ^short = "Each message shall include a globally unique id."
+
+* text MS
+* text ^short = "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle."
+* text.status MS
+* text.div MS
+
+* definition MS 
+
 * event[x] 
 * event[x] only Coding
 * event[x] ^short = "The event element shall contain a value from MedComMessagingMessageTypes"
 * eventCoding 1.. MS
 * eventCoding from $MessageTypes
-* eventCoding.code 1..
-//* destination.extension contains MedComMessagingDestinationUseExtension named use
-//* destination.extension[use] MS
+* eventCoding.code 1.. MS
+* eventCoding.system MS
+* eventCoding.system 1..
+
+* destination MS
 * destination ^slicing.discriminator.type = #value
-* destination ^slicing.discriminator.path = "$this.extension.value"
+* destination ^slicing.discriminator.path = "extension('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension').value.code"
 * destination ^slicing.rules = #closed
 * destination contains primary 1..1 and cc 0..
+* destination[primary] MS
 * destination[primary].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
-* destination[primary].extension[use].valueCoding = $Use#primary
+* destination[primary].extension[use].valueCoding.code = #primary
+* destination[primary].extension[use].valueCoding.system = $Use
 * destination[primary].receiver only Reference(MedComMessagingOrganization)
 * destination[primary].receiver 1.. MS
 * destination[primary].receiver ^type.aggregation = #bundled
 * destination[primary].endpoint MS
 * destination[primary].receiver ^short = "The primary reciever of the message"
+
+* destination[cc] MS
 * destination[cc].extension contains MedComMessagingDestinationUseExtension named use 1..1 MS
-//* destination[cc].extension[use] 1..1 MS
-* destination[cc].extension[use].valueCoding = $Use#cc
+* destination[cc].extension[use].valueCoding.system = $Use
+* destination[cc].extension[use].valueCoding.code = #cc
 * destination[cc].receiver only Reference(MedComMessagingOrganization)
 * destination[cc].receiver 1.. MS
 * destination[cc].receiver ^type.aggregation = #bundled
 * destination[cc].endpoint MS
 * destination[cc].receiver ^short = "The carbon copy reciever of the message. Is only used when a message has multiple recievers."
+
 * sender 1.. MS
 * sender ^type.aggregation = #bundled
 * sender only Reference(MedComMessagingOrganization)
 * sender ^short = "The actual sender of the message"
+
 * source MS
 * source.endpoint MS
 * source ^short = "Contains the information about the target for the Acknowledgement message."
-* text MS
-* text ^short = "A summary of the resource content. The narrative text shall always be included when exchanging a MedCom message. All MustSupport elements and extensions shall be included."
-* definition MS 
 
-Instance: b4e7e16b-9658-4172-acd7-5e7193f2cc5f
-InstanceOf: MedComMessagingDestinationUseExtension
-Usage: #inline
-* valueCoding.code = $Use#primary
+* insert ProducerShallPutInNarrative(id)
+* insert ProducerShallPutInNarrative(eventCoding.code)
+* insert ProducerShallPutInNarrative(destination[primary].endpoint)
+* insert ProducerShallPutInNarrative(destination[primary].receiver)
+* insert ProducerShallPutInNarrative(destination[cc].endpoint)
+* insert ProducerShallPutInNarrative(destination[cc].receiver)
+* insert ProducerShallPutInNarrative(sender)
+* insert ProducerShallPutInNarrative(source.endpoint)
 
 //Empty message Header
 Instance: 3881874e-2042-4a00-aee8-23512799f512
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for an empty message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for an empty message. Valid only if used in a bundle (message)."
-* destination[primary].extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#empty-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -65,7 +82,7 @@ Instance: 42c01434-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message). NB: A CareCommunication message shall use a CareCommunicationMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -77,7 +94,7 @@ Instance: cb0b2ef0-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a HospitalNotification message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a HospitalNotification message. Valid only if used in a bundle (message). NB: A HospitalNotification message shall use a HospitalNotificationMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#hospital-notification-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -89,7 +106,7 @@ Instance: d28b9cb4-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message). NB: An Acknowledgement message shall use an AcknowledgementMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use] = b4e7e16b-9658-4172-acd7-5e7193f2cc5f
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#acknowledgement-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
