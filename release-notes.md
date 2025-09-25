@@ -22,6 +22,6 @@
 
   - **Profile: MedComMessagingProvenance**  
     - MustSupport + Obligation (SHALL:in-narrative): `id`  
-    - MustSupport: `text.status`, `text.div`, `occurred[x]`  
-    - Cardinality 1..1: `text.status`, `text.div`  
+    - MustSupport: `text.status`, `text.div`, `occurred[x]`, `activity.coding.system`
+    - Cardinality 1..1: `text.status`, `text.div`, `activity.coding`, `activity.coding.system`
     - Obligation (SHALL:in-narrative): `target`, `occurred[x]:occurredDateTime`, `activity.coding.code`, `agent.who`, `entity.role`, `entity.what.reference`, `entity.what.identifier`  
