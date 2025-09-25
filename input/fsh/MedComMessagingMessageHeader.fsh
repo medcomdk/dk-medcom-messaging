@@ -70,8 +70,7 @@ Instance: 3881874e-2042-4a00-aee8-23512799f512
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for an empty message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for an empty message. Valid only if used in a bundle (message)."
-* destination[primary].extension[use].valueCoding.system = $Use
-* destination[primary].extension[use].valueCoding.code = #primary
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#empty-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -83,8 +82,7 @@ Instance: 42c01434-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a CareCommunication message. Valid only if used in a bundle (message). NB: A CareCommunication message shall use a CareCommunicationMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use].valueCoding.system = $Use
-* destination[primary].extension[use].valueCoding.code = #primary
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -96,8 +94,7 @@ Instance: cb0b2ef0-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a HospitalNotification message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a HospitalNotification message. Valid only if used in a bundle (message). NB: A HospitalNotification message shall use a HospitalNotificationMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use].valueCoding.system = $Use
-* destination[primary].extension[use].valueCoding.code = #primary
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#hospital-notification-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)
@@ -109,8 +106,7 @@ Instance: d28b9cb4-8feb-11ec-b909-0242ac120002
 InstanceOf: MedComMessagingMessageHeader
 Title: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message)"
 Description: "MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message). NB: An Acknowledgement message shall use an AcknowledgementMessageHeader, as some elements and invariants are missing."
-* destination[primary].extension[use].valueCoding.system = $Use
-* destination[primary].extension[use].valueCoding.code = #primary
+* destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#acknowledgement-message
 * destination[primary].endpoint = "http://medcomfhir.dk/unknown"
 * destination[primary].receiver = Reference(74cdf292-abf3-4f5f-80ea-60a48013ff6d)

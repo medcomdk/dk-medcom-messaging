@@ -6,10 +6,7 @@ Description: "A formally recognized organizations registered for exchanging mess
 * identifier 2.. MS
 * identifier[EAN-ID] 1.. 
 * identifier[EAN-ID] MS
-* insert ProducerShallPutInNarrative(id)
-* insert ProducerShallPutInNarrative(identifier[SOR-ID])
 * insert ProducerShallPutInNarrative(identifier[EAN-ID])
-* insert ProducerShallPutInNarrative(name)
 
 // Reciever instance
  Instance: 74cdf292-abf3-4f5f-80ea-60a48013ff6d

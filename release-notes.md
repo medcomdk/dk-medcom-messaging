@@ -6,6 +6,8 @@
 
 - **Dependencies** tab in the menu bar is added.  
 
+- Duplicates on the profile.destination[primary/cc].extension[use].valueCoding have been removed **MedComMessagingMessageHeader**. This has no functional effect and is just a visual change.
+
 - The following **cardinalities**, **MustSupport**, and **Obligation (SHALL:in-narrative)** have been added:  
 
   - **Profile: MedComMessagingMessageHeader**  
