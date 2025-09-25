@@ -3,11 +3,11 @@ canonical: http://medcomfhir.dk/ig/messaging
 name: DK MedCom Messaging
 title: DK MedCom Messaging
 description: This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication
-status: active
-version: 3.0.0
+status: draft
+version: 4.0.0-trial-use
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: release
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: MedCom
   url: http://www.medcom.dk
