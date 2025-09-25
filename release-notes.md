@@ -10,8 +10,8 @@
 
   - **Profile: MedComMessagingMessageHeader**  
     - MustSupport + Obligation (SHALL:in-narrative): `event[x].code`, `destination:primary.extension:use.value[x].code`, `destination:cc.extension:use.value[x].code`  
-    - MustSupport: `id`, `text.status`, `text.div`, `destination`, `destination:primary`, `destination:primary.extension:use.url`, `destination:primary.extension:use.value[x]`, `destination:primary.extension:use.value[x].system`, `destination:cc`, `destination:cc.extension:use.url`, `destination:cc.extension:use.value[x]`, `destination:cc.extension:use.value[x].system`  
-    - Cardinality 1..1: `text.status`, `text.div`  
+    - MustSupport: `id`, `text.status`, `text.div`, `destination`, `destination:primary`, `destination:primary.extension:use.url`, `destination:primary.extension:use.value[x]`, `destination:primary.extension:use.value[x].system`, `destination:cc`, `destination:cc.extension:use.url`, `destination:cc.extension:use.value[x]`, `destination:cc.extension:use.value[x].system`, `event[x].system`
+    - Cardinality 1..1: `text.status`, `text.div`, `event[x].system`
     - Obligation (SHALL:in-narrative):, `destination:primary.endpoint`, `destination:primary.receiver`, `destination:cc.endpoint`, `destination:cc.receiver`, `sender`, `source.endpoint`
 
   - **Profile: MedComMessagingOrganization**  
