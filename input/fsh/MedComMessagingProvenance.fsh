@@ -18,7 +18,8 @@ Description: "Provenance information about the messages preceeding the current m
 * activity 1.. MS
 * activity from $ActivityCodesValueset
 * activity ^definition = "Activity that occurred and triggered the current or a previous message"
-* activity.coding 1.. MS
+* activity.coding 1..1 MS
+* activity.coding.system 1.. MS
 * activity.coding.code 1.. MS
 * activity.coding.code ^definition = "The activity defined by the system"
 * agent 1.. MS

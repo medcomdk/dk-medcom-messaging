@@ -15,6 +15,8 @@ Description: "MessageHeader for MedCom messages"
 * eventCoding 1.. MS
 * eventCoding from $MessageTypes
 * eventCoding.code 1.. MS
+* eventCoding.system MS
+* eventCoding.system 1..
 //* destination.extension contains MedComMessagingDestinationUseExtension named use
 //* destination.extension[use] MS
 * destination MS
