@@ -2,9 +2,9 @@ id: medcom.fhir.dk.messaging
 canonical: http://medcomfhir.dk/ig/messaging
 name: DK MedCom Messaging
 title: DK MedCom Messaging
-description: This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication
+description: This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication.
 status: active
-version: 4.0.0
+version: 4.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -14,7 +14,7 @@ publisher:
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 dependencies:
   hl7.fhir.dk.core: 3.4.0
-  medcom.fhir.dk.core: 3.0.0
+  medcom.fhir.dk.core: 3.0.1
   
 menu:
   Home: index.html

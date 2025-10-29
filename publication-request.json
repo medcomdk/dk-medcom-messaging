@@ -1,10 +1,10 @@
 {
     "package-id": "medcom.fhir.dk.messaging",
-    "version": "4.0.0",
-    "path": "http://medcomfhir.dk/ig/messaging/4.0.0",
+    "version": "4.0.1",
+    "path": "http://medcomfhir.dk/ig/messaging/4.0.1",
     "status": "release",
     "sequence": "Release 4.x.x",
     "mode" : "milestone",
     "descmd": "@release-notes.md",
-    "desc": "See release notes"
+    "desc": "Release 4.0.1 - See release notes"
 }
