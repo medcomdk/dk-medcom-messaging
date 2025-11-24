@@ -1,19 +1,20 @@
-id: dk.fhir.ig.dk-medcom-messaging
-canonical: http://medcomfhir.dk/fhir/messaging
+id: medcom.fhir.dk.messaging
+canonical: http://medcomfhir.dk/ig/messaging
 name: MedComMessaging
 title: "DK MedCom Messaging"
 description: The DK MedCom Messaging IG
 status: active
-version: "2.0.0"
+version: 2.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: Build CI
+releaseLabel: release
 publisher:
   name: MedCom
   url: http://www.medcom.dk
 jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 dependencies:
-  dk.fhir.ig.dk-medcom-core: current
+  medcom.fhir.dk.core: 2.0.1
+  hl7.fhir.dk.core: 2.0.0
 
 menu:
   Table of Contents: toc.html
