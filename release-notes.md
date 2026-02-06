@@ -1,1 +1,1 @@
-- Changed the FHIRPath constraint 'conformsTo' to checking the meta.profile. This is due to various FHIR SDK's not supporting the function 'conformsTo'
+- Changed the FHIRPath constraint 'conformsTo'. This is due to various FHIR SDK's not supporting the function 'conformsTo'
