@@ -16,9 +16,9 @@ Description: "Base resource for all MedCom messages."
 //* obeys medcom-messaging-3
 
 Invariant: medcom-messaging-1
-Description: "The MessageHeader resource shall conform to medcom-messaging-messageHeader profile"
+Description: "The MessageHeader resource shall use the medcom-messaging-messageHeader profile"
 Severity: #error
-Expression: "entry[0].resource.conformsTo('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader')"
+Expression: "entry[0].resource.ofType(MessageHeader).meta.profile.where(startsWith('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader')).exists()"
 
 Invariant: medcom-messaging-2
 Description: "There shall be at least one Provenance resource in a MedCom message"
@@ -26,9 +26,9 @@ Severity: #error
 Expression: "entry.resource.ofType(Provenance).exists()"
 
 Invariant: medcom-messaging-3
-Description: "All Provenance resources shall conform to the medcom-messaging-provenance profile"
+Description: "All Provenance resources shall use the medcom-messaging-provenance profile"
 Severity: #error
-Expression: "entry.resource.ofType(Provenance).conformsTo('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance').allTrue()"
+Expression: "entry.resource.ofType(Provenance).meta.profile.where(startsWith('http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance')).allTrue()"
 
 Instance: eb26be85-fdb7-454d-a980-95cba6d1745b
 InstanceOf: MedComMessagingMessage

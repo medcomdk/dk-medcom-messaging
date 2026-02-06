@@ -1,1 +1,1 @@
-- Corrected a versioning error in the terminology. Therefore, MedComMessaging has been re-released to fix the dependency.
+- Changed the FHIRPath constraint 'conformsTo' to checking the meta.profile. This is due to various FHIR SDK's not supporting the function 'conformsTo'
