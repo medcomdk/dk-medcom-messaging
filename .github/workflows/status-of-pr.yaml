@@ -8,7 +8,5 @@ permissions:
   pull-requests: write
 
 jobs:
-  lint:
-    uses: medcomdk/fhir-publishing/.github/workflows/fsh-lint.yaml@main
   qa-report-status:
     uses: medcomdk/fhir-publishing/.github/workflows/qa-report.yaml@main
