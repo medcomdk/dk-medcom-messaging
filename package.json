@@ -1,0 +1,13 @@
+{
+  "name": "medcom.fhir.dk.messaging",
+  "version": "4.0.2",
+  "description": "Put a description here",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.dk.core": "3.4.0",
+    "medcom.fhir.dk.core": "3.0.1"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ]
+}

@@ -18,15 +18,19 @@ dependencies:
   
 menu:
   Home: index.html
+  Governance:
+    FHIR Message exchange: message-exchange.html
+    VANS Network layer: vans-network-layer.html
+    FHIR Validation: validation-governance.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
   More:
-    Table of Contents: toc.html
     Downloads: downloads.html
     Dependencies: dependencies.html
 
 parameters:
+  path-history: history.html
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
