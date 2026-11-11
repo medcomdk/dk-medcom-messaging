@@ -1,1 +1,2 @@
-- Changed the FHIRPath constraint 'conformsTo'. This is due to various FHIR SDK's not supporting the function 'conformsTo'
+- In order to reduce the amount of touchpoints/websites implementers of MedCom FHIR standards has to orient themselves in, the MedCom Github FHIR Communication https://medcomdk.github.io/MedCom-FHIR-Communication/ has been merged into this package.
+- New look to the website

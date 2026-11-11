@@ -4,7 +4,7 @@ name: DK MedCom Messaging
 title: DK MedCom Messaging
 description: This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication.
 status: active
-version: 4.0.2
+version: 4.0.3
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -18,15 +18,19 @@ dependencies:
   
 menu:
   Home: index.html
+  Governance:
+    FHIR Message exchanges: message-exchange.html
+    VANS Network layer: vans-network-layer.html
+    FHIR Validation: validation-governance.html
   Profiles: profiles.html
   Extensions: extensions.html
   Artifacts: artifacts.html
   More:
-    Table of Contents: toc.html
     Downloads: downloads.html
     Dependencies: dependencies.html
 
 parameters:
+  path-history: history.html
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
