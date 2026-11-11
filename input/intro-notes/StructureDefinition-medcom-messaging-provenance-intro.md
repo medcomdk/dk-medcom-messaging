@@ -2,19 +2,16 @@
 
 This profile is used as the Provenance resource for MedCom FHIR messages. The Provenance resource tracks information about the activity what was created, revised, or deleted, while referencing the current message and previous messages if such exist. This is why the Provenance resource is valuable in MedCom messaging.
 
-MedComMessagingProvenance describes the activity and history of a message. The element Provenance.agent.who contains information about the organisation that was involved in the activity. The element Provenance.target references the MessageHeader in the current message. The element Provenance.entity.what references the event that initiated a message e.g., a previous message.
+MedComMessagingProvenance describes the activity and history of a message. The element `Provenance.agent.who` contains information about the organisation that was involved in the activity. The element `Provenance.target` references the MessageHeader in the current message, this is used to distinguish between current and previous messages. The element `Provenance.entity.what` references the event that initiated a message e.g., a previous message.
 
 The figure below illustrates the references from the Provenance resource.
 
 <img alt="MedComMessagingProvenance handles information about the involved organization in the element *who*, references the MessageHeader related to current message in the element *target*, and references to the event that initiated a message in the element *what*." src="./MedComMessagingProvenance.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
  
-
-> **Governance review:** GC-10: The profile target short description refers to the current message, while activity descriptions and message history include previous messages. Confirm how targets differ between the current Provenance and historical entries.
-
 ## Activity
 
-In MedCom messaging, the Provenance.target shall always be a reference to a [MedComMessagingMessageHeader](StructureDefinition-medcom-messaging-messageHeader.html) or an inherited of MedComMessagingMessageHeader. 
-The target references the resources on which the activity has occurred. For instance if Provenance.activity is 'new-message', it describes that the message referenced from the Messageheader is a new message. 
+In MedCom messaging, the `Provenance.target` shall always be a reference to a [MedComMessagingMessageHeader](StructureDefinition-medcom-messaging-messageHeader.html) or a profile which inherits from / has a base resource of `MedComMessagingMessageHeader`. 
+The target references the resources on which the new activity has occurred. For instance if `Provenance.activity` is `reply-message`, it references a MessageHeader in the Bundle which will point to the contents of the reply. While other Provenances in the bundle, might point to earlier activities, such as the first activtiy `new-message` which will point to another messageheader that describes the contents of the first message.
 
 The activitycodes used to describe the activity of the MedCom message may differ between standard e.g. [HospitalNotification](http://medcomfhir.dk/ig/hospitalnotification/) and [CareCommunication](http://medcomfhir.dk/ig/carecommunication/). Due to the different requirements of activities in a standard, it should be expected that there will be different invariants pointing at specific ValueSets for the given standard.
 

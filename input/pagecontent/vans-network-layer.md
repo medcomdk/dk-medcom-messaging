@@ -39,35 +39,35 @@ The following fields are under `VANSEnvelope/Message/MetaInformation/Document/`:
 #### Version
 {: #version}
 
-`Version` **MUST** match "Version" in MedCom's Standards Directory and therefore depends on the message type and version.
+`Version` **SHALL** match "Version" in MedCom's Standards Directory and therefore depends on the message type and version.
 
 ### MedCom FHIR message types
 {: #medcom-fhir-message-types}
 
-| Message type | Sending envelope | Receiving envelope | Name | Version | Allowed postfix values |
-|:---|:---|:---|:---|:---|:---|
-| CareCommunication | VANSEnvelope | VANSEnvelope | `MCM:FDIS91#<postfix value>` | `5.0` | [CareCommunication categories](https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html) |
+| Message type         | Sending envelope   | Receiving envelope                                                 | Name                         | Version | Allowed postfix values                                                                                                                  |
+| :------------------- | :----------------- | :----------------------------------------------------------------- | :--------------------------- | :------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| CareCommunication    | VANSEnvelope       | VANSEnvelope                                                       | `MCM:FDIS91#<postfix value>` | `5.0`   | [CareCommunication categories](https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html)                  |
 | HospitalNotification | VANSEnvelope (EPJ) | KOMBIT's BeskedFordeler envelope (EOJ and other municipal systems) | `MCM:FDIS20#<postfix value>` | `3.0.0` | [HospitalNotification activity codes](https://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html) |
-| Acknowledgement | VANSEnvelope | VANSEnvelope | `MCM:FCTL#<postfix value>` | `2.0` | [FHIR response codes](http://hl7.org/fhir/R4/valueset-response-code.html) |
+| Acknowledgement      | VANSEnvelope       | VANSEnvelope                                                       | `MCM:FCTL#<postfix value>`   | `2.0`   | [FHIR response codes](http://hl7.org/fhir/R4/valueset-response-code.html)                                                               |
 
-For CareCommunication and HospitalNotification, `Name` **MUST** be taken from [MedComMessagingSorEdiSystem](https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html). For Acknowledgement, `Name` **MUST** be taken from [VansStatisticalCodeCombination](https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-statisticalCodes.html).
+For CareCommunication and HospitalNotification, `Name` **SHALL** be taken from [MedComMessagingSorEdiSystem](https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html). For Acknowledgement, `Name` **SHALL** be taken from [VansStatisticalCodeCombination](https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-statisticalCodes.html).
 
-For each type, postfix values **MUST** come from the linked value set, and the combined name and postfix **MUST** conform to VansStatisticalCodeCombination.
+For each type, postfix values **SHALL** come from the linked value set, and the combined name and postfix **SHALL** conform to VansStatisticalCodeCombination.
 
 ## Reliable Messaging using VANSEnvelope
 {: #reliable-messaging-using-vansenvelope}
 
 Reliable transport for MedCom FHIR messages **SHALL** follow the [VANSEnvelope specification](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation) (Danish). These rules cover envelope acknowledgements; [FHIR application acknowledgements](message-exchange.html#reliable-messaging-using-medcom-fhir-messaging) are handled separately. `MessageIdentifier` below means `Message/MetaInformation/Identifier`.
 
-| ID | Rule |
-|:---|:---|
-| VR1.S | `VANSEnvelope/Message/MetaInformation/Transport/Type` **SHALL** be `reliable` or omitted (the default) for envelopes carrying FHIR messages. |
-| VR2.R | The receiver **SHALL** return a VANSEnvelopeAcknowledgement to the sender |
-| VR3.R | The receiver **SHALL** check `EnvelopeIdentifier` and `MessageIdentifier` against previously received envelopes. If both are new, it **SHALL** process the message. |
-| VR4.R | An unchanged message with a known `MessageIdentifier` is a duplicate, whether its `EnvelopeIdentifier` is known or new. |
+| ID    | Rule                                                                                                                                                                                                           |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| VR1.S | `VANSEnvelope/Message/MetaInformation/Transport/Type` **SHALL** be `reliable` or omitted (the default) for envelopes carrying FHIR messages.                                                                   |
+| VR2.R | The receiver **SHALL** return a VANSEnvelopeAcknowledgement to the sender                                                                                                                                      |
+| VR3.R | The receiver **SHALL** check `EnvelopeIdentifier` and `MessageIdentifier` against previously received envelopes. If both are new, it **SHALL** process the message.                                            |
+| VR4.R | An unchanged message with a known `MessageIdentifier` is a duplicate, whether its `EnvelopeIdentifier` is known or new.                                                                                        |
 | VR5.S | When retrying an unchanged message, including after a lost acknowledgement, the sender **SHALL** assign a new `EnvelopeIdentifier` and dispatch time, retaining the `MessageIdentifier` and all other content. |
-| VR6.S | Changed message content **SHALL** be sent as a new message with new `EnvelopeIdentifier`, `MessageIdentifier`, and applicable timestamps. |
-| VR7.R | A known `EnvelopeIdentifier` paired with a new `MessageIdentifier` is an error: envelope identifiers **SHALL NOT** be reused. The receiver **MAY** return a negative VANSEnvelopeAcknowledgement. |
+| VR6.S | Changed message content **SHALL** be sent as a new message with new `EnvelopeIdentifier`, `MessageIdentifier`, and applicable timestamps.                                                                      |
+| VR7.R | A known `EnvelopeIdentifier` paired with a new `MessageIdentifier` is an error: envelope identifiers **SHALL NOT** be reused. The receiver **MAY** return a negative VANSEnvelopeAcknowledgement.              |
 
 ## Sending MedCom FHIR messages
 {: #sending-medcom-fhir-messages}
@@ -76,7 +76,7 @@ Sending MedCom FHIR messages over the VANS Network requires the sending system t
 
 When sending to both primary and cc destinations.
 
-1. A Sending Ecosystem **MUST** secure that the MedCom FHIR messages for primary and cc receivers differ on ID's as described in [Governance for MedCom FHIR Messaging](message-exchange.html)
+1. A Sending Ecosystem **SHALL** secure that the MedCom FHIR messages for primary and cc receivers differ on ID's as described in [Governance for MedCom FHIR Messaging](message-exchange.html)
 2. A Sending Ecosystem MUST ensure that the total size of a MedCom FHIR message, once embedded in a VANSEnvelope, does not exceed 100 MB when sent on the VANS Network. If the size is validated before the message is embedded in a VANSEnvelope, the Sending Ecosystem MAY apply a slightly lower limit to reserve space for the VANSEnvelope overhead and thereby ensure compliance with the 100 MB maximum.
 
 ## Receiving MedCom FHIR messages
