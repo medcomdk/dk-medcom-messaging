@@ -14,7 +14,7 @@ The Danish ruleset is based on:
 
 These MedCom FHIR Messaging Governance rules are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly, these kinds of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
 
-It is the intention that the MedCom FHIR Messaging Governance rules together with MedCom’s FHIR standards for the individual messages form the full and sufficient basis for implementing MedCom’s healthcare messages.
+It is the intention that the MedCom FHIR Messaging Governance rules together with MedCom’s FHIR standards for the individual messages form the full and sufficient basis for implementing MedCom messages.
 
 ## General Messaging Model
 
@@ -50,7 +50,7 @@ This table presents the most commonly used terms and abbreviations used to descr
 | EAN       | Location Number issued by the GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number). Location numbers and related electronic message types are used for electronic message-based communication between the health service parties | <a href="https://www.medcom.dk/opslag/support/sundhedsvaesenets-organisationsregister-sor">Only Danish</a>- further links on that page|
 | SDS       | Sundhedsdatastyrelsen (The Danish Health Data Authority) |<a href ="https://sundhedsdatastyrelsen.dk/da/" target="_blank">Danish</a> & <a href ="https://sundhedsdatastyrelsen.dk/da/english" target="_blank">English</a>|
 | SOR       | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) | <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="blank">Only Danish</a>|
-| VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |<a href ="https://www.kmd.dk/" target="_blank">KMD</a>, <a href ="https://www.multimed.dk/kommunikation/" target="_blank">MiltiMed A/S</a>, <a href ="https://www.truecommerce.com/dk-da/" target="_blank">TrueCommerce</a>|
+| VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |<a href ="https://www.kmd.dk/" target="_blank">KMD</a>, <a href ="https://www.multimed.dk/kommunikation/" target="_blank">MultiMed A/S</a>, <a href ="https://www.truecommerce.com/dk-da/" target="_blank">TrueCommerce</a>|
 | Dispatch  | Dispatch of a message means the process in the Sending System, where a message is send|N/A|
 | Shipment  | Shipment of a message means the whole process from dispatchment in the Sending System to reception in the Receiving System|N/A|
 | Sending System | The system that dispatches a message |N/A|
