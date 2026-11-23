@@ -50,11 +50,11 @@ AA = Application Accept & AE = Application Error & AR = Application Reject. You 
 
 | ID | Rules |
 |:------| :-----|
-| KR1.R | A FHIR message **SHALL** be acknowledged |
+| KR1.R | A MedCom FHIR message **SHALL** be acknowledged |
 | KR2.R | An Acknowledgement message **SHALL** not be acknowledged |
 | KR3.R | If no errors are found while receiving a message, an AA Acknowledgement **SHALL** be sent |
 | KR4.R | If a technical error occurs in the receiver's system while receiving a message, an AR Acknowledgement **SHALL** be sent |
-| KR5.R | If a technical error from KR4.R is resolved and the message can be loaded. An AA Acknowledgement **SHALL**  be sent |
+| KR5.R | If a technical error from KR4.R is resolved and the message can be loaded. An AA Acknowledgement or AE Acknowledgement **SHALL**  be sent depending on the validation |
 | KR6.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with an AE Acknowledgement |
 | KR7.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 

@@ -12,7 +12,7 @@ The Sending Ecosystem **SHALL** validate the message before dispatching it. Vali
 ## VANSEnvelope
 {: #vansenvelope}
 
-VANSEnvelope carries XML-based and other non-EDIFACT message types over the VANS network. Unless the individual standard specifies otherwise, MedCom FHIR messages **SHALL** be sent in a VANSEnvelope, whether encoded as `application/fhir+xml` or `application/fhir+json`. Reception may use VANSEnvelope or another envelope, such as KOMBIT's BeskedFordeler envelope.
+VANSEnvelope carries XML-based and other non-EDIFACT message types over the VANS network. Unless the individual standard specifies otherwise, MedCom FHIR messages **SHALL** be sent in a VANSEnvelope, whether encoded as XML or JSON. Reception may use VANSEnvelope or another envelope, such as KOMBIT's BeskedFordeler envelope.
 
 Envelopment **SHALL** follow the [VANSEnvelope specification](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation) (Danish) and the metadata requirements below. Each VANSEnvelope **SHALL** contain only one MedCom FHIR message.
 
@@ -77,7 +77,7 @@ Sending MedCom FHIR messages over the VANS Network requires the sending system t
 When sending to both primary and cc destinations.
 
 1. A Sending Ecosystem **SHALL** secure that the MedCom FHIR messages for primary and cc receivers differ on ID's as described in [Governance for MedCom FHIR Messaging](message-exchange.html)
-2. A Sending Ecosystem MUST ensure that the total size of a MedCom FHIR message, once embedded in a VANSEnvelope, does not exceed 100 MB when sent on the VANS Network. If the size is validated before the message is embedded in a VANSEnvelope, the Sending Ecosystem MAY apply a slightly lower limit to reserve space for the VANSEnvelope overhead and thereby ensure compliance with the 100 MB maximum.
+2. A Sending Ecosystem **SHALL** ensure that the total size of a MedCom FHIR message, once embedded in a VANSEnvelope, does not exceed 100 MB when sent on the VANS Network. If the size is validated before the message is embedded in a VANSEnvelope, the Sending Ecosystem **MAY** apply a slightly lower limit to reserve space for the VANSEnvelope overhead and thereby ensure compliance with the 100 MB maximum.
 
 ## Receiving MedCom FHIR messages
 {: #receiving-medcom-fhir-messages}
